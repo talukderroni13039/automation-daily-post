@@ -4,6 +4,7 @@ using System.Net.Mail;
 using System.Net.Mime;
 using System.Net;
 using System.Text;
+using System.Text.Json;
 namespace DailyPost.BackgroundWorker.Services
 {
     public class DailyPostService : IDailyPostService
@@ -13,19 +14,54 @@ namespace DailyPost.BackgroundWorker.Services
         {
             _configuration = configuration;
         }
+        public async Task<Message> ReadMessageFromJsonFile()
+        {
+            try
+            {
+                var projectRoot = Path.Combine(Directory.GetCurrentDirectory(), "Message");
+                string filePath = Path.Combine(projectRoot, "Message.json");
+                string jsonString = await File.ReadAllTextAsync(filePath);
+                // Deserialize the JSON to your object
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true // This allows for case-insensitive property matching
+                };
+
+                Message message = JsonSerializer.Deserialize<Message>(jsonString, options);
+                return message;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error reading message from JSON file: {ex.Message}");
+                return null;
+            }
+        }
         public async Task<string> TakeScreenShot(IWebDriver driver)
         {
             var screenshotDir = Path.Combine(Directory.GetCurrentDirectory(), "Screenshot");
             string fileName = $"ReportConfirmation_{DateTime.Now:yyyyMMdd_HHmmss}.png";
             string screenshotPath = Path.Combine(screenshotDir, fileName);
 
-            // Create directory if it doesn't exist (only once)
+            // Create directory if it doesn't exist
             Directory.CreateDirectory(screenshotDir); // This is safe even if directory exists
+
+            // Delete all existing files in the screenshot directory
+            foreach (string file in Directory.GetFiles(screenshotDir))
+            {
+                try
+                {
+                    File.Delete(file);
+                }
+                catch (Exception ex)
+                {
+                    // Log the exception but continue with other files
+                    Console.WriteLine($"Failed to delete file {file}: {ex.Message}");
+                }
+            }
 
             // Take screenshot
             Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
             screenshot.SaveAsFile(screenshotPath);
-
             return screenshotPath;
 
         }

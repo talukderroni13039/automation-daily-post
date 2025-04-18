@@ -2,10 +2,10 @@
 using Microsoft.Extensions.Logging;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support;
-using System.Text.Json;
 using DailyPost.BackgroundWorker.Services;
 using Microsoft.Extensions.Configuration;
+using System.Text;
+using OpenQA.Selenium.Support.UI;
 
 namespace DailyPost.BackgroundWorker
 {
@@ -75,30 +75,25 @@ namespace DailyPost.BackgroundWorker
                 var createReportLink = driver.FindElement(By.CssSelector("a[href='/app/reports/new/']"));
                 createReportLink.Click();
                 Console.WriteLine("📝 'Create New Report' button clicked.");
-
                 Thread.Sleep(3000); // wait for navigation
-
-                // Optional: Check if you are on the new report page
-                Console.WriteLine("Now on page: " + driver.Url);
-
-
                 var textarea = driver.FindElement(By.CssSelector("textarea[placeholder='What did you work on today?']"));
 
-                // Enter the message
-                string message = "I have worked on orbcomm fe4- enricher and NTC project. I have worked 6 hour for fe4-enricher for Unit Test case implementation for Rename Event Mapping and Engine Hourtask and 2 hour for NTC Rooma Assignment -Implement CRM into CRA task.";
-
-                textarea.SendKeys(message);
-                Thread.Sleep(1000); // let the JS bindings process the input
-
-                // Re-enable button wait if needed (for AlpineJS to detect input and reportId state)
+                // read the message from json file 
+                Message message = await _iDailyPostService.ReadMessageFromJsonFile();
+                var status=await GenerateStatusMessage(message);
+                textarea.SendKeys(status);   // Enter the message
+                Thread.Sleep(1000);     // let the JS bindings process the input
+              
                 var submitButton = driver.FindElement(By.CssSelector("button[type='submit']"));
-              //  submitButton.Click();
+              //    submitButton.Click();
 
                 Console.WriteLine("✅ Report submitted.");
-                Thread.Sleep(4000); // Wait for dashboard to load
-                                    //======================================Report Submitted===================================//
+                Console.WriteLine("Waiting 10 seconds to observe page behavior...");
+                Thread.Sleep(30000);  // Wait 20 seconds
+                // Wait for dashboard to load
+                //======================================Report Submitted===================================//
 
-                var screenShotPath=  await _iDailyPostService.TakeScreenShot(driver);
+                var screenShotPath =  await _iDailyPostService.TakeScreenShot(driver);
 
                 string emailTemplate = _iConfiguration.GetValue<string>("ReceiverEmail:EmailTemplate");
                 string subjectTemplate = _iConfiguration.GetValue<string>("ReceiverEmail:SubjectTemplate");
@@ -120,6 +115,44 @@ namespace DailyPost.BackgroundWorker
 
                 driver.Quit();
             }
+        }
+        private async Task<string> GenerateStatusMessage(Message message)
+        {
+            // Split the comma-separated values
+            string[] projects = message.ProjectName.Split(',', StringSplitOptions.TrimEntries);
+            string[] tasks = message.TaskName.Split(',', StringSplitOptions.TrimEntries);
+            string[] hours = message.Hour.Split(',', StringSplitOptions.TrimEntries);
+
+            // Build a single sentence
+            StringBuilder status = new StringBuilder();
+            status.Append("I have worked ");
+
+            // Assume the arrays should be of equal length, or at least have matching pairs
+            int count = Math.Min(Math.Min(projects.Length, tasks.Length), hours.Length);
+
+            for (int i = 0; i < count; i++)
+            {
+                if (i > 0)
+                {
+                    if (i == count - 1)
+                        status.Append(" and ");
+                    else
+                        status.Append(", ");
+                }
+
+                status.AppendFormat("{0} hours on {1} project for the task - {2}",hours[i], projects[i], tasks[i]);
+            }
+
+            // Add the note at the end as part of the same sentence
+            if (!string.IsNullOrEmpty(message.Note))
+            {
+                status.AppendFormat("; additional notes: {0}", message.Note);
+            }
+
+            status.Append(".");
+            return status.ToString();
+
+            //"I have worked 6 hours on Project X for the task API Integration and 2 hours on Project Y for the task Task 2; additional notes: Completed all required test cases."
         }
     }
 }

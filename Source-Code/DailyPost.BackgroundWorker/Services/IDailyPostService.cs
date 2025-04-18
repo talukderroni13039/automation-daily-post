@@ -10,6 +10,7 @@ namespace DailyPost.BackgroundWorker.Services
 {
     public interface IDailyPostService
     {
+        Task<Message> ReadMessageFromJsonFile();
       Task<string> TakeScreenShot(IWebDriver driver);
       Task<bool> SendEmail(EmailInfo emailInfo);
     }

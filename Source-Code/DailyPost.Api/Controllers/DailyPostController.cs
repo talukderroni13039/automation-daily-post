@@ -2,6 +2,9 @@
 using System.Text.Json;
 using System.Xml.Linq;
 using System.IO;
+using OpenQA.Selenium.BiDi.Modules.Script;
+using System.Runtime.Intrinsics.Arm;
+using DailyPost.BackgroundWorker;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace DailyPost.Api.Controllers
@@ -13,12 +16,14 @@ namespace DailyPost.Api.Controllers
         [HttpPost("CreateMessage")]
         public async Task<IActionResult> Post([FromBody] Message message)
         {
-
-            var _filePath = "Message.json";
+            var projectRoot = Path.Combine(Directory.GetCurrentDirectory(), "Message");
+            string filePath = Path.Combine(projectRoot, "Message.json");
             var jsonData = JsonSerializer.Serialize(message, new JsonSerializerOptions { WriteIndented = true });
-            if (System.IO.File.Exists(_filePath))
+          
+            Directory.CreateDirectory(projectRoot); 
+            if (System.IO.File.Exists(filePath))
             {
-                await System.IO.File.WriteAllTextAsync(_filePath, jsonData);
+                await System.IO.File.WriteAllTextAsync(filePath, jsonData);
             }
             return Ok(message);
         }
