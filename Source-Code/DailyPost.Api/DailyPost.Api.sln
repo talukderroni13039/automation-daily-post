@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyPost.Api", "DailyPost.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyPost.BackgroundWorker", "..\DailyPost.BackgroundWorker\DailyPost.BackgroundWorker.csproj", "{0B6FEBAB-E3F0-71FD-6407-0A6A9EDE418E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyPost.Common", "..\DailyPost.Common\DailyPost.Common.csproj", "{3B41209D-93B3-4B88-B72A-26842BC37FC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0B6FEBAB-E3F0-71FD-6407-0A6A9EDE418E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B6FEBAB-E3F0-71FD-6407-0A6A9EDE418E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B6FEBAB-E3F0-71FD-6407-0A6A9EDE418E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B41209D-93B3-4B88-B72A-26842BC37FC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B41209D-93B3-4B88-B72A-26842BC37FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B41209D-93B3-4B88-B72A-26842BC37FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B41209D-93B3-4B88-B72A-26842BC37FC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

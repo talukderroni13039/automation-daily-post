@@ -32,7 +32,7 @@ namespace DailyPost.BackgroundWorker.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error reading message from JSON file: {ex.Message}");
+              
                 return null;
             }
         }

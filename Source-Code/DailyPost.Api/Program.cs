@@ -1,5 +1,7 @@
 using DailyPost.BackgroundWorker;
 using DailyPost.BackgroundWorker.Services;
+using Serilog;
+using Serilog.Events;
 
 namespace DailyPost.Api
 {
@@ -19,12 +21,26 @@ namespace DailyPost.Api
                     .AddJsonFile($"Config/appsettings.{env}.json", optional: true, reloadOnChange: true)
                     .AddEnvironmentVariables();
 
+
+            //logger
+            Log.Logger = new LoggerConfiguration()
+               .MinimumLevel.Information()
+               .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+               .Enrich.FromLogContext()
+               .WriteTo.File(
+                   Path.Combine(Directory.GetCurrentDirectory(), "Logs", "log_.txt"),
+                   rollingInterval: RollingInterval.Day,
+                   retainedFileCountLimit: 7,
+                   outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
+               .CreateLogger();
+
+
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddTransient<IDailyPostService,DailyPostService>();
-            builder.Services.AddHostedService<Worker>();
+          //  builder.Services.AddHostedService<Worker>();
 
             var app = builder.Build();
 

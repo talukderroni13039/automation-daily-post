@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
-using System.Xml.Linq;
-using System.IO;
-using OpenQA.Selenium.BiDi.Modules.Script;
-using System.Runtime.Intrinsics.Arm;
 using DailyPost.BackgroundWorker;
+using DailyPost.BackgroundWorker.Services;
+using Serilog;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace DailyPost.Api.Controllers
@@ -12,10 +11,22 @@ namespace DailyPost.Api.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class DailyPostController : ControllerBase
-    {    
+    {
+
+        private readonly ILogger<DailyPostController> _logger;
+
+        public DailyPostController(ILogger<DailyPostController> logger, IDailyPostService dailyPostService, IConfiguration configuration)
+        {
+            _logger = logger;
+        }
+
         [HttpPost("CreateMessage")]
         public async Task<IActionResult> Post([FromBody] Message message)
         {
+
+            Log.Information("Message1 ");
+            Log.Error($"Message1");
+
             var projectRoot = Path.Combine(Directory.GetCurrentDirectory(), "Message");
             string filePath = Path.Combine(projectRoot, "Message.json");
             var jsonData = JsonSerializer.Serialize(message, new JsonSerializerOptions { WriteIndented = true });
