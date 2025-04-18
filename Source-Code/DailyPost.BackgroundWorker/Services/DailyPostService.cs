@@ -4,7 +4,7 @@ using System.Net.Mail;
 using System.Net.Mime;
 using System.Net;
 using System.Text;
-namespace DailyPost.BackgroundWorker
+namespace DailyPost.BackgroundWorker.Services
 {
     public class DailyPostService : IDailyPostService
     {
@@ -15,8 +15,7 @@ namespace DailyPost.BackgroundWorker
         }
         public async Task<string> TakeScreenShot(IWebDriver driver)
         {
-
-            string screenshotDir = Path.Combine(AppContext.BaseDirectory, "Screenshot");
+            var screenshotDir = Path.Combine(Directory.GetCurrentDirectory(), "Screenshot");
             string fileName = $"ReportConfirmation_{DateTime.Now:yyyyMMdd_HHmmss}.png";
             string screenshotPath = Path.Combine(screenshotDir, fileName);
 

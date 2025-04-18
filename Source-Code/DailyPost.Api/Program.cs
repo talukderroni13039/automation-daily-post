@@ -1,4 +1,5 @@
 using DailyPost.BackgroundWorker;
+using DailyPost.BackgroundWorker.Services;
 
 namespace DailyPost.Api
 {
@@ -21,6 +22,8 @@ namespace DailyPost.Api
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddTransient<IDailyPostService,DailyPostService>();
             builder.Services.AddHostedService<Worker>();
 
             var app = builder.Build();

@@ -4,6 +4,8 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support;
 using System.Text.Json;
+using DailyPost.BackgroundWorker.Services;
+using Microsoft.Extensions.Configuration;
 
 namespace DailyPost.BackgroundWorker
 {
@@ -11,10 +13,12 @@ namespace DailyPost.BackgroundWorker
     {
         private readonly ILogger<Worker> _logger;
         private readonly IDailyPostService _iDailyPostService;
-        public Worker(ILogger<Worker> logger, IDailyPostService dailyPostService)
+        private readonly IConfiguration _iConfiguration;
+        public Worker(ILogger<Worker> logger, IDailyPostService dailyPostService,IConfiguration configuration)
         {
             _logger = logger;
             _iDailyPostService = dailyPostService;
+            _iConfiguration = configuration;    
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -88,20 +92,29 @@ namespace DailyPost.BackgroundWorker
 
                 // Re-enable button wait if needed (for AlpineJS to detect input and reportId state)
                 var submitButton = driver.FindElement(By.CssSelector("button[type='submit']"));
-                submitButton.Click();
+              //  submitButton.Click();
 
                 Console.WriteLine("✅ Report submitted.");
+                Thread.Sleep(4000); // Wait for dashboard to load
+                                    //======================================Report Submitted===================================//
 
-                //================================Report Submitted============================//
-                var screenShotPath = await _iDailyPostService.TakeScreenShot(driver);
+                var screenShotPath=  await _iDailyPostService.TakeScreenShot(driver);
+
+                string emailTemplate = _iConfiguration.GetValue<string>("ReceiverEmail:EmailTemplate");
+                string subjectTemplate = _iConfiguration.GetValue<string>("ReceiverEmail:SubjectTemplate");
+                string recipientEmail = _iConfiguration.GetValue<string>("ReceiverEmail:Email");
+                string recipientName = _iConfiguration.GetValue<string>("ReceiverEmail:RecipientName");
+
+                string formattedDate = DateTime.Now.ToString("dd/MM/yyyy");  // 18/04/2025
+
+                string emailBody = string.Format(emailTemplate, recipientName, formattedDate);
+                string subject= string.Format(subjectTemplate, formattedDate);
                 EmailInfo emailInfo = new EmailInfo()
                 {
-                    To = "Talukder",
-                    Subject = "",
-                    Body = message,
+                    To = recipientEmail,
+                    Subject = subject,
+                    Body = emailBody,
                     Files = new List<string>() { screenShotPath },
-
-
                 };
                 await _iDailyPostService.SendEmail(emailInfo);
 

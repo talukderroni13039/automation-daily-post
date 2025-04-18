@@ -26,7 +26,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DailyPost.BackgroundWorker\DailyPost.BackgroundWorker.csproj" />
-    <ProjectReference Include="..\DailyPost.Common\DailyPost.BackgroundWorker.csproj" />
   </ItemGroup>
 
 </Project>
