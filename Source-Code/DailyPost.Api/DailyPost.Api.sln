@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyPost.Api", "DailyPost.Api.csproj", "{C677FF17-E62C-4F58-ABA7-815CF7FAA451}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyPost.BackgroundWorker", "..\DailyPost.BackgroundWorker\DailyPost.BackgroundWorker.csproj", "{0B6FEBAB-E3F0-71FD-6407-0A6A9EDE418E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C677FF17-E62C-4F58-ABA7-815CF7FAA451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C677FF17-E62C-4F58-ABA7-815CF7FAA451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C677FF17-E62C-4F58-ABA7-815CF7FAA451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C677FF17-E62C-4F58-ABA7-815CF7FAA451}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B6FEBAB-E3F0-71FD-6407-0A6A9EDE418E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B6FEBAB-E3F0-71FD-6407-0A6A9EDE418E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B6FEBAB-E3F0-71FD-6407-0A6A9EDE418E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B6FEBAB-E3F0-71FD-6407-0A6A9EDE418E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4787B68-7715-4DC8-8AFF-A264AC470E81}
+	EndGlobalSection
+EndGlobal

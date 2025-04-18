@@ -1,0 +1,6 @@
+@DailyPost.Api_HostAddress = http://localhost:5124
+
+GET {{DailyPost.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

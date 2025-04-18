@@ -1,0 +1,7 @@
+﻿
+# Ignore all bin and obj directories across the entire project
+**/bin/
+**/obj/
+
+# Ignore all .vs directories, regardless of location
+**/.vs/
