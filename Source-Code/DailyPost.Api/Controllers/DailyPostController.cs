@@ -20,23 +20,29 @@ namespace DailyPost.Api.Controllers
             _logger = logger;
         }
 
-        [HttpPost("CreateMessage")]
+        [HttpPost("PostDailyStatus")]
         public async Task<IActionResult> Post([FromBody] Message message)
         {
-
-            Log.Information("Message1 ");
-            Log.Error($"Message1");
-
-            var projectRoot = Path.Combine(Directory.GetCurrentDirectory(), "Message");
-            string filePath = Path.Combine(projectRoot, "Message.json");
-            var jsonData = JsonSerializer.Serialize(message, new JsonSerializerOptions { WriteIndented = true });
-          
-            Directory.CreateDirectory(projectRoot); 
-            if (System.IO.File.Exists(filePath))
+            try
             {
-                await System.IO.File.WriteAllTextAsync(filePath, jsonData);
+
+                var projectRoot = Path.Combine(Directory.GetCurrentDirectory(), "Message");
+                string filePath = Path.Combine(projectRoot, "Message.json");
+                var jsonData = JsonSerializer.Serialize(message, new JsonSerializerOptions { WriteIndented = true });
+
+                Directory.CreateDirectory(projectRoot);
+                if (System.IO.File.Exists(filePath))
+                {
+                    await System.IO.File.WriteAllTextAsync(filePath, jsonData);
+                    Log.Information("Data from api has been saved to json file.");
+                }
+                return Ok(message);
             }
-            return Ok(message);
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Exception Occured " + ex.Message);
+                throw;
+            }
         }
     }
 }

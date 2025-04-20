@@ -5,12 +5,13 @@ using System.Net.Mime;
 using System.Net;
 using System.Text;
 using System.Text.Json;
+using Serilog;
 namespace DailyPost.BackgroundWorker.Services
 {
     public class DailyPostService : IDailyPostService
     {
         public IConfiguration _configuration;
-        public DailyPostService(IConfiguration configuration) 
+        public DailyPostService(IConfiguration configuration)
         {
             _configuration = configuration;
         }
@@ -32,39 +33,39 @@ namespace DailyPost.BackgroundWorker.Services
             }
             catch (Exception ex)
             {
-              
+                Log.Error(ex, "Exception Occured " + ex.Message);
                 return null;
             }
         }
         public async Task<string> TakeScreenShot(IWebDriver driver)
         {
-            var screenshotDir = Path.Combine(Directory.GetCurrentDirectory(), "Screenshot");
-            string fileName = $"ReportConfirmation_{DateTime.Now:yyyyMMdd_HHmmss}.png";
-            string screenshotPath = Path.Combine(screenshotDir, fileName);
-
-            // Create directory if it doesn't exist
-            Directory.CreateDirectory(screenshotDir); // This is safe even if directory exists
-
-            // Delete all existing files in the screenshot directory
-            foreach (string file in Directory.GetFiles(screenshotDir))
+            try
             {
-                try
+                var screenshotDir = Path.Combine(Directory.GetCurrentDirectory(), "Screenshot");
+                string fileName = $"ReportConfirmation_{DateTime.Now:yyyyMMdd_HHmmss}.png";
+                string screenshotPath = Path.Combine(screenshotDir, fileName);
+
+                // Create directory if it doesn't exist
+                Directory.CreateDirectory(screenshotDir); // This is safe even if directory exists
+
+                // Delete all existing files in the screenshot directory
+                foreach (string file in Directory.GetFiles(screenshotDir))
                 {
                     File.Delete(file);
                 }
-                catch (Exception ex)
-                {
-                    // Log the exception but continue with other files
-                    Console.WriteLine($"Failed to delete file {file}: {ex.Message}");
-                }
+
+                // Take screenshot
+                Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+                screenshot.SaveAsFile(screenshotPath);
+                return screenshotPath;
             }
-
-            // Take screenshot
-            Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
-            screenshot.SaveAsFile(screenshotPath);
-            return screenshotPath;
-
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Exception Occured " + ex.Message);
+                return string.Empty;
+            }
         }
+
         public async Task<bool> SendEmail(EmailInfo emailInfo)
         {
             // Email configuration
@@ -147,7 +148,7 @@ namespace DailyPost.BackgroundWorker.Services
                 }
                 catch (Exception ex)
                 {
-                    //Console.WriteLine("Failed to send email. Error: " + ex.Message);
+                    Log.Error(ex, "Exception Occured " + ex.Message);
                     return false;
                 }
             }

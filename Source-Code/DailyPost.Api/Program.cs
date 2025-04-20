@@ -22,7 +22,7 @@ namespace DailyPost.Api
                     .AddEnvironmentVariables();
 
 
-            //logger
+            //serilog logger
             Log.Logger = new LoggerConfiguration()
                .MinimumLevel.Information()
                .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
@@ -40,7 +40,7 @@ namespace DailyPost.Api
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddTransient<IDailyPostService,DailyPostService>();
-          //  builder.Services.AddHostedService<Worker>();
+            builder.Services.AddHostedService<Worker>();
 
             var app = builder.Build();
 

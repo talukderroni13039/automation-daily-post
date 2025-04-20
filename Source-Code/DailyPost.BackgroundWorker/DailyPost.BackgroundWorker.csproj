@@ -15,4 +15,8 @@
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="135.0.7049.9500" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DailyPost.Common\DailyPost.Common.csproj" />
+  </ItemGroup>
+
 </Project>

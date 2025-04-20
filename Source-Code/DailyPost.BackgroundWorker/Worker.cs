@@ -6,17 +6,17 @@ using DailyPost.BackgroundWorker.Services;
 using Microsoft.Extensions.Configuration;
 using System.Text;
 using OpenQA.Selenium.Support.UI;
+using Serilog;
 
 namespace DailyPost.BackgroundWorker
 {
     public class Worker : BackgroundService
     {
-        private readonly ILogger<Worker> _logger;
         private readonly IDailyPostService _iDailyPostService;
         private readonly IConfiguration _iConfiguration;
-        public Worker(ILogger<Worker> logger, IDailyPostService dailyPostService, IConfiguration configuration)
+        public Worker(IDailyPostService dailyPostService, IConfiguration configuration)
         {
-            _logger = logger;
+           
             _iDailyPostService = dailyPostService;
             _iConfiguration = configuration;
         }
@@ -26,9 +26,7 @@ namespace DailyPost.BackgroundWorker
 
             try
             {
-                Log.Information("Message1 ");
-                Log.Error($"Message1");
-                _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+                Log.Information("Worker running at: {time}", DateTimeOffset.Now);
                 string baseUrl = "https://techjays-ai-manager.replit.app";
                 string dashboardUrl = baseUrl + "/app/";
 
@@ -62,21 +60,21 @@ namespace DailyPost.BackgroundWorker
                     string currentUrl = driver.Url;
                     string pageTitle = driver.Title;
 
-                    _logger.LogInformation("Current URL: " + currentUrl);
+                    Log.Information("Current URL: " + currentUrl);
                     if (currentUrl.Contains("/app"))
                     {
-                        _logger.LogInformation("Login with cookies succeeded and dashboard is loaded!");
+                        Log.Information("Login with cookies succeeded and dashboard is loaded!");
                     }
                     else
                     {
-                        _logger.LogError("Login failed with cookies!");
+                        Log.Error("Login failed with cookies!");
                         return;
                     }
 
                     // Option 1: By href attribute
                     var createReportLink = driver.FindElement(By.CssSelector("a[href='/app/reports/new/']"));
                     createReportLink.Click();
-                    _logger.LogInformation("Create New Report' button clicked");
+                    Log.Information("Create New Report' button clicked");
 
                     Thread.Sleep(3000); // wait for navigation
                     var textarea = driver.FindElement(By.CssSelector("textarea[placeholder='What did you work on today?']"));
@@ -90,8 +88,8 @@ namespace DailyPost.BackgroundWorker
                     var submitButton = driver.FindElement(By.CssSelector("button[type='submit']"));
                     //    submitButton.Click();
 
-                    _logger.LogInformation("submitButton clicked");
-                    Thread.Sleep(30000);  // Wait 20 seconds
+                    Log.Information("submitButton clicked");
+                    Thread.Sleep(30000);  // Wait 30 seconds
 
                     //======================================Report Submitted===================================//
 
@@ -114,13 +112,13 @@ namespace DailyPost.BackgroundWorker
                         Files = new List<string>() { screenShotPath },
                     };
                     await _iDailyPostService.SendEmail(emailInfo);
-                    _logger.LogInformation("Send Email Sucessfully");
+                    Log.Information("Email sent Sucessfully");
                     driver.Quit();
                 }
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex,"Exception Occured "+ ex.Message);
+                Log.Error(ex,"Exception Occured "+ ex.Message);
             }
 
         }
