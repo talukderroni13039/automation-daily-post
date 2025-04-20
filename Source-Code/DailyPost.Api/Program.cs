@@ -1,5 +1,6 @@
 using DailyPost.BackgroundWorker;
 using DailyPost.BackgroundWorker.Services;
+using Quartz;
 using Serilog;
 using Serilog.Events;
 
@@ -14,7 +15,6 @@ namespace DailyPost.Api
             // Add services to the container.
 
             var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-
             builder.Configuration
                     .SetBasePath(Directory.GetCurrentDirectory())
                     .AddJsonFile("Config/appsettings.json", optional: false, reloadOnChange: true)
@@ -39,8 +39,10 @@ namespace DailyPost.Api
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddTransient<IDailyPostService,DailyPostService>();
-            builder.Services.AddHostedService<Worker>();
+            builder.Services.AddTransient<IDailyPostService, DailyPostService>();
+            //=============== call Backgrounf Job here============================
+            builder.Services.AddQuartzScheduler(builder.Configuration); //Configure Job
+            // builder.Services.AddHostedService<Worker>();
 
             var app = builder.Build();
 

@@ -1,16 +1,14 @@
-﻿using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using OpenQA.Selenium.Chrome;
+﻿using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using DailyPost.BackgroundWorker.Services;
 using Microsoft.Extensions.Configuration;
 using System.Text;
-using OpenQA.Selenium.Support.UI;
 using Serilog;
+using Quartz;
 
 namespace DailyPost.BackgroundWorker
 {
-    public class Worker : BackgroundService
+    public class Worker : IJob
     {
         private readonly IDailyPostService _iDailyPostService;
         private readonly IConfiguration _iConfiguration;
@@ -20,8 +18,7 @@ namespace DailyPost.BackgroundWorker
             _iDailyPostService = dailyPostService;
             _iConfiguration = configuration;
         }
-
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        public async Task Execute(IJobExecutionContext context)
         {
 
             try
@@ -39,10 +36,12 @@ namespace DailyPost.BackgroundWorker
                     Thread.Sleep(2000);
 
                     // Step 2: Add cookies (these are your cookies)
+                    string csrftoken = _iConfiguration.GetValue<string>("Credentials:csrftoken");
+                    string sessionid = _iConfiguration.GetValue<string>("Credentials:sessionid");
                     var cookies = new List<Cookie>
                         {
-                            new Cookie("csrftoken", "iXmOcF9BfkGWkUVdUfZCFESJom9dQBGU", ".techjays-ai-manager.replit.app", "/", null),
-                            new Cookie("sessionid", "jld1fqf8pcg9x5svl82hqq2h1osdf0la", "techjays-ai-manager.replit.app", "/", null)
+                            new Cookie("csrftoken", csrftoken, ".techjays-ai-manager.replit.app", "/", null),
+                            new Cookie("sessionid", sessionid, "techjays-ai-manager.replit.app", "/", null)
                         };
 
                     foreach (var cookie in cookies)
@@ -120,7 +119,7 @@ namespace DailyPost.BackgroundWorker
             {
                 Log.Error(ex,"Exception Occured "+ ex.Message);
             }
-
+       
         }
         private async Task<string> GenerateStatusMessage(Message message)
         {
