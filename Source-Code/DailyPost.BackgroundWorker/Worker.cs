@@ -108,7 +108,7 @@ namespace DailyPost.BackgroundWorker
                     Thread.Sleep(1000);     // let the JS bindings process the input
 
                     var submitButton = driver.FindElement(By.CssSelector("button[type='submit']"));
-                    submitButton.Click();
+                   // submitButton.Click();
 
                     Log.Information("submitButton clicked");
                     Thread.Sleep(30000);  // Wait 30 seconds

@@ -1,6 +1,6 @@
 {
-  "ProjectName": "Orbcomm",
-  "TaskName": "Task1",
-  "Hour": "6",
-  "Note": ""
+  "ProjectName": "string",
+  "TaskName": "string",
+  "Hour": "string",
+  "Note": "string"
 }

@@ -3,7 +3,7 @@
     "http": {
       "commandName": "Project",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "uat"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "http://localhost:5124"
@@ -21,7 +21,7 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "uat"
       }
     }
   },

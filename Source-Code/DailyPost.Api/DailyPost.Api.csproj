@@ -21,13 +21,8 @@
 
   <ItemGroup>
     <Folder Include="Logs\" />
+    <Folder Include="Message\" />
     <Folder Include="Screenshot\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Update="Message\message.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 
 </Project>
