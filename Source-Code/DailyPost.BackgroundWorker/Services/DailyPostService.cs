@@ -20,7 +20,7 @@ namespace DailyPost.BackgroundWorker.Services
             try
             {
                 var projectRoot = Path.Combine(Directory.GetCurrentDirectory(), "Message");
-                string filePath = Path.Combine(projectRoot, "Message.json");
+                string filePath = Path.Combine(projectRoot, "message.json");
                 string jsonString = await File.ReadAllTextAsync(filePath);
                 // Deserialize the JSON to your object
                 var options = new JsonSerializerOptions

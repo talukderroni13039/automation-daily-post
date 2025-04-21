@@ -4,6 +4,7 @@ using DailyPost.BackgroundWorker;
 using DailyPost.BackgroundWorker.Services;
 using Serilog;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace DailyPost.Api.Controllers
@@ -25,23 +26,25 @@ namespace DailyPost.Api.Controllers
         {
             try
             {
+                Log.Information("Data Comming From  api");
 
-                var projectRoot = Path.Combine(Directory.GetCurrentDirectory(), "Message");
-                string filePath = Path.Combine(projectRoot, "Message.json");
+                string projectRoot = Path.Combine(Directory.GetCurrentDirectory(), "Message");
+                string filePath = Path.Combine(projectRoot, "message.json");
                 var jsonData = JsonSerializer.Serialize(message, new JsonSerializerOptions { WriteIndented = true });
 
+                // Make sure the directory exists
                 Directory.CreateDirectory(projectRoot);
-                if (System.IO.File.Exists(filePath))
-                {
-                    await System.IO.File.WriteAllTextAsync(filePath, jsonData);
-                    Log.Information("Data from api has been saved to json file.");
-                }
+
+                // Write the file (creates it if it doesn't exist, or overwrites it if it does)
+                await System.IO.File.WriteAllTextAsync(filePath, jsonData);
+                Log.Information("Data from API has been saved to JSON file.");
+
                 return Ok(message);
             }
             catch (Exception ex)
             {
                 Log.Error(ex, "Exception Occured " + ex.Message);
-                throw;
+                return Problem( detail: "An error occurred while saving the message data", title: "Internal Server Error",  statusCode: StatusCodes.Status500InternalServerError);
             }
         }
     }

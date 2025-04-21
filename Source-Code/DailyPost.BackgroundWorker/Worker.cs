@@ -27,8 +27,31 @@ namespace DailyPost.BackgroundWorker
                 string baseUrl = "https://techjays-ai-manager.replit.app";
                 string dashboardUrl = baseUrl + "/app/";
 
+                // Create a unique Chrome user data directory for this session
+                string uniqueId = Guid.NewGuid().ToString();
+                string tempDir = Path.GetTempPath();
+                string userDataDir = Path.Combine(tempDir, $"chrome-data-{uniqueId}");
+
+                // Ensure directory exists
+                Directory.CreateDirectory(userDataDir);
+
+                // Configure Chrome options for complete isolation
                 ChromeOptions options = new ChromeOptions();
-                options.AddArgument("--start-maximized");
+                options.AddArgument("--headless=new");
+                options.AddArgument("--disable-gpu");
+                options.AddArgument("--no-sandbox");
+                options.AddArgument("--disable-dev-shm-usage");
+                options.AddArgument($"--user-data-dir={userDataDir}");
+                options.AddArgument("--disable-extensions");
+                options.AddArgument("--disable-default-apps");
+                options.AddArgument("--no-first-run");
+                options.AddArgument("--no-default-browser-check");
+
+                // Configure service
+                var service = ChromeDriverService.CreateDefaultService();
+                service.SuppressInitialDiagnosticInformation = true;
+                service.HideCommandPromptWindow = true;
+
                 using (IWebDriver driver = new ChromeDriver(options))
                 {
                     // Step 1: Navigate to base URL to set the cookie context
@@ -85,7 +108,7 @@ namespace DailyPost.BackgroundWorker
                     Thread.Sleep(1000);     // let the JS bindings process the input
 
                     var submitButton = driver.FindElement(By.CssSelector("button[type='submit']"));
-                    //    submitButton.Click();
+                    submitButton.Click();
 
                     Log.Information("submitButton clicked");
                     Thread.Sleep(30000);  // Wait 30 seconds
@@ -114,12 +137,34 @@ namespace DailyPost.BackgroundWorker
                     Log.Information("Email sent Sucessfully");
                     driver.Quit();
                 }
+                if (Directory.Exists(userDataDir))
+                {
+                    Directory.Delete(userDataDir, true);
+                }
+
             }
             catch (Exception ex)
             {
                 Log.Error(ex,"Exception Occured "+ ex.Message);
             }
        
+        }
+        private void KillExistingChromeProcesses()
+        {
+            try
+            {
+                var process = new System.Diagnostics.Process();
+                process.StartInfo.FileName = "/bin/bash";
+                process.StartInfo.Arguments = "-c \"pkill -f chrome || true; pkill -f chromedriver || true\"";
+                process.StartInfo.UseShellExecute = false;
+                process.Start();
+                process.WaitForExit(5000);
+                Log.Information("Cleared existing Chrome processes");
+            }
+            catch (Exception ex)
+            {
+                Log.Warning($"Failed to kill Chrome processes: {ex.Message}");
+            }
         }
         private async Task<string> GenerateStatusMessage(Message message)
         {
