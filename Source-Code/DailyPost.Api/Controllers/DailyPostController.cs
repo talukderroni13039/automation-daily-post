@@ -34,8 +34,6 @@ namespace DailyPost.Api.Controllers
 
                 // Make sure the directory exists
                 Directory.CreateDirectory(projectRoot);
-
-                // Write the file (creates it if it doesn't exist, or overwrites it if it does)
                 await System.IO.File.WriteAllTextAsync(filePath, jsonData);
                 Log.Information("Data from API has been saved to JSON file.");
 

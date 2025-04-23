@@ -41,7 +41,7 @@ namespace DailyPost.Api
 
             builder.Services.AddTransient<IDailyPostService, DailyPostService>();
             //=============== call Backgrounf Job here============================
-            //  builder.Services.AddQuartzScheduler(builder.Configuration); //Configure Job
+            builder.Services.AddQuartzScheduler(builder.Configuration); //Configure Job
             // builder.Services.AddHostedService<Worker>();
 
             var app = builder.Build();

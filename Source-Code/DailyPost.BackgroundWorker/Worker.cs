@@ -99,7 +99,7 @@ namespace DailyPost.BackgroundWorker
                     Log.Information("Create New Report' button clicked");
 
                     Thread.Sleep(3000); // wait for navigation
-                    var textarea = driver.FindElement(By.CssSelector("textarea[placeholder='What did you work on today?']"));
+                    var textarea = driver.FindElement(By.CssSelector("textarea[placeholder='Share your key accomplishments and milestones reached today...']"));
 
                     // read the message from json file 
                     Message message = await _iDailyPostService.ReadMessageFromJsonFile();
@@ -108,7 +108,7 @@ namespace DailyPost.BackgroundWorker
                     Thread.Sleep(1000);     // let the JS bindings process the input
 
                     var submitButton = driver.FindElement(By.CssSelector("button[type='submit']"));
-                   // submitButton.Click();
+                    submitButton.Click();
 
                     Log.Information("submitButton clicked");
                     Thread.Sleep(30000);  // Wait 30 seconds
