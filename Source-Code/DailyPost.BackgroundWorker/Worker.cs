@@ -99,22 +99,15 @@ namespace DailyPost.BackgroundWorker
                     Log.Information("Create New Report' button clicked");
 
                     Thread.Sleep(3000); // wait for navigation
-                   // var textarea = driver.FindElement(By.CssSelector("textarea[placeholder='Share your key accomplishments and milestones reached today...']"));
-                    //// Option 1: By placeholder (most reliable)
-                    //var messageInput = driver.FindElement(By.CssSelector("input[placeholder='Share your key accomplishments and milestones reached today...']"));
+                                        // var textarea = driver.FindElement(By.CssSelector("textarea[placeholder='Share your key accomplishments and milestones reached today...']"));
+                                        //// Option 1: By placeholder (most reliable)
+                                        //var messageInput = driver.FindElement(By.CssSelector("input[placeholder='Share your key accomplishments and milestones reached today...']"));
 
                     //// Option 2: By x-model attribute
-                    //var messageInput = driver.FindElement(By.CssSelector("input[x-model='newMessage']"));
+                    ///
+                    var textarea = driver.FindElement(By.CssSelector("input[x-model='newMessage']"));
 
-                    // Option 3: Combination for added specificity
-                    var textarea = driver.FindElement(By.CssSelector("input.w-full[placeholder*='today']"));
-
-
-
-
-
-
-
+  
                     // read the message from json file 
                     Message message = await _iDailyPostService.ReadMessageFromJsonFile();
                     var status = await GenerateStatusMessage(message);
