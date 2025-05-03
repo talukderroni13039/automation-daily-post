@@ -1,4 +1,4 @@
-using DailyPost.BackgroundWorker;
+﻿using DailyPost.BackgroundWorker;
 using DailyPost.BackgroundWorker.Services;
 using Quartz;
 using Serilog;
@@ -44,6 +44,7 @@ namespace DailyPost.Api
             builder.Services.AddQuartzScheduler(builder.Configuration); //Configure Job
             // builder.Services.AddHostedService<Worker>();
 
+         
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
