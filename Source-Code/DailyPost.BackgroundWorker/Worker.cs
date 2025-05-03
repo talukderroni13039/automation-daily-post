@@ -103,11 +103,11 @@ namespace DailyPost.BackgroundWorker
                                         //// Option 1: By placeholder (most reliable)
                                         //var messageInput = driver.FindElement(By.CssSelector("input[placeholder='Share your key accomplishments and milestones reached today...']"));
 
-                    //// Option 2: By x-model attribute
-                    ///
-                    var textarea = driver.FindElement(By.CssSelector("input[x-model='newMessage']"));
+                    // Option 2: By x-model attribute
+              
+       
+                    var textarea = driver.FindElement(By.CssSelector("textarea[x-model='newMessage']"));
 
-  
                     // read the message from json file 
                     Message message = await _iDailyPostService.ReadMessageFromJsonFile();
                     var status = await GenerateStatusMessage(message);
@@ -155,23 +155,6 @@ namespace DailyPost.BackgroundWorker
                 Log.Error(ex,"Exception Occured "+ ex.Message);
             }
        
-        }
-        private void KillExistingChromeProcesses()
-        {
-            try
-            {
-                var process = new System.Diagnostics.Process();
-                process.StartInfo.FileName = "/bin/bash";
-                process.StartInfo.Arguments = "-c \"pkill -f chrome || true; pkill -f chromedriver || true\"";
-                process.StartInfo.UseShellExecute = false;
-                process.Start();
-                process.WaitForExit(5000);
-                Log.Information("Cleared existing Chrome processes");
-            }
-            catch (Exception ex)
-            {
-                Log.Warning($"Failed to kill Chrome processes: {ex.Message}");
-            }
         }
         private async Task<string> GenerateStatusMessage(Message message)
         {
