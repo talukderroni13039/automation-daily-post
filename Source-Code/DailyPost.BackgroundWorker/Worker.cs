@@ -24,7 +24,7 @@ namespace DailyPost.BackgroundWorker
             try
             {
                 Log.Information("Worker running at: {time}", DateTimeOffset.Now);
-                string baseUrl = "https://techjays-ai-manager.replit.app";
+                string baseUrl = "https://aimanager.techjays.com";
                 string dashboardUrl = baseUrl + "/app/";
 
                 // Create a unique Chrome user data directory for this session
@@ -63,8 +63,8 @@ namespace DailyPost.BackgroundWorker
                     string sessionid = _iConfiguration.GetValue<string>("Credentials:sessionid");
                     var cookies = new List<Cookie>
                         {
-                            new Cookie("csrftoken", csrftoken, ".techjays-ai-manager.replit.app", "/", null),
-                            new Cookie("sessionid", sessionid, "techjays-ai-manager.replit.app", "/", null)
+                            new Cookie("csrftoken", csrftoken, "aimanager.techjays.com", "/", null),
+                            new Cookie("sessionid", sessionid, "aimanager.techjays.com", "/", null)
                         };
 
                     foreach (var cookie in cookies)
@@ -115,7 +115,7 @@ namespace DailyPost.BackgroundWorker
                     Thread.Sleep(1000);     // let the JS bindings process the input
 
                     var submitButton = driver.FindElement(By.CssSelector("button[type='submit']"));
-                    submitButton.Click();
+                 //   submitButton.Click();
 
                     Log.Information("submitButton clicked");
                     Thread.Sleep(30000);  // Wait 30 seconds

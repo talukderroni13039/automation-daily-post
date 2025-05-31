@@ -1,0 +1,29 @@
+2025-05-31 12:40:35 [INF] Adding 1 jobs, 1 triggers.
+2025-05-31 12:40:35 [INF] Adding job: DEFAULT.Worker
+2025-05-31 12:42:14 [INF] Adding 1 jobs, 1 triggers.
+2025-05-31 12:42:14 [INF] Adding job: DEFAULT.Worker
+2025-05-31 12:43:37 [INF] Adding 1 jobs, 1 triggers.
+2025-05-31 12:43:37 [INF] Adding job: DEFAULT.Worker
+2025-05-31 12:44:04 [INF] Worker running at: "2025-05-31T12:44:04.8074706+06:00"
+2025-05-31 12:46:47 [ERR] Exception Occured invalid cookie domain: Cookie 'domain' mismatch
+  (Session info: chrome=136.0.7103.114)
+OpenQA.Selenium.InvalidCookieDomainException: invalid cookie domain: Cookie 'domain' mismatch
+  (Session info: chrome=136.0.7103.114)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.CookieJar.AddCookie(Cookie cookie)
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context)
+2025-05-31 12:46:50 [INF] Worker running at: "2025-05-31T12:46:50.9765621+06:00"
+2025-05-31 12:47:00 [INF] Worker running at: "2025-05-31T12:47:00.7472245+06:00"
+2025-05-31 12:47:27 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-05-31 12:47:29 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-05-31 12:47:37 [INF] Create New Report' button clicked
+2025-05-31 12:48:00 [INF] Adding 1 jobs, 1 triggers.
+2025-05-31 12:48:01 [INF] Adding job: DEFAULT.Worker
+2025-05-31 12:48:07 [INF] Worker running at: "2025-05-31T12:48:07.2079324+06:00"
+2025-05-31 12:48:34 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-05-31 12:48:36 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-05-31 12:48:37 [INF] Create New Report' button clicked
+2025-05-31 12:49:14 [INF] submitButton clicked
+2025-05-31 12:49:53 [INF] Email sent Sucessfully
