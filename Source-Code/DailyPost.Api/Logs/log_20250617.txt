@@ -1,0 +1,96 @@
+2025-06-17 12:39:00 [INF] Adding 1 jobs, 1 triggers.
+2025-06-17 12:39:00 [INF] Adding job: DEFAULT.Worker
+2025-06-17 12:40:01 [INF] Worker running at: "2025-06-17T12:40:01.4919859+06:00"
+2025-06-17 12:41:02 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-17 12:41:02 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-17 12:41:04 [INF] Create New Report' button clicked
+2025-06-17 12:41:08 [INF] submitButton clicked
+2025-06-17 12:41:43 [INF] Email sent Sucessfully
+2025-06-17 12:42:00 [INF] Worker running at: "2025-06-17T12:42:00.0153521+06:00"
+2025-06-17 12:42:13 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-17 12:42:13 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-17 12:42:14 [INF] Create New Report' button clicked
+2025-06-17 12:42:18 [INF] submitButton clicked
+2025-06-17 12:42:54 [INF] Email sent Sucessfully
+2025-06-17 12:44:00 [INF] Worker running at: "2025-06-17T12:44:00.0083229+06:00"
+2025-06-17 12:44:12 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-17 12:44:12 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-17 12:44:13 [INF] Create New Report' button clicked
+2025-06-17 12:44:17 [INF] submitButton clicked
+2025-06-17 12:44:54 [INF] Email sent Sucessfully
+2025-06-17 12:46:00 [INF] Worker running at: "2025-06-17T12:46:00.0095691+06:00"
+2025-06-17 12:46:12 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-17 12:46:12 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-17 12:46:13 [INF] Create New Report' button clicked
+2025-06-17 12:46:17 [INF] submitButton clicked
+2025-06-17 12:46:54 [INF] Email sent Sucessfully
+2025-06-17 12:48:00 [INF] Worker running at: "2025-06-17T12:48:00.0027772+06:00"
+2025-06-17 12:48:12 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-17 12:48:12 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-17 12:48:13 [INF] Create New Report' button clicked
+2025-06-17 12:48:17 [INF] submitButton clicked
+2025-06-17 12:48:54 [INF] Email sent Sucessfully
+2025-06-17 12:50:00 [INF] Worker running at: "2025-06-17T12:50:00.0154179+06:00"
+2025-06-17 12:50:13 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-17 12:50:13 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-17 12:50:13 [INF] Create New Report' button clicked
+2025-06-17 12:50:18 [INF] submitButton clicked
+2025-06-17 12:50:52 [INF] Email sent Sucessfully
+2025-06-17 12:52:00 [INF] Worker running at: "2025-06-17T12:52:00.0061612+06:00"
+2025-06-17 12:52:13 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-17 12:52:13 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-17 12:52:13 [INF] Create New Report' button clicked
+2025-06-17 12:52:18 [INF] submitButton clicked
+2025-06-17 12:52:54 [INF] Email sent Sucessfully
+2025-06-17 12:54:00 [INF] Worker running at: "2025-06-17T12:54:00.0143394+06:00"
+2025-06-17 12:54:13 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-17 12:54:13 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-17 12:54:13 [INF] Create New Report' button clicked
+2025-06-17 12:54:18 [INF] submitButton clicked
+2025-06-17 12:54:54 [INF] Email sent Sucessfully
+2025-06-17 12:56:00 [INF] Worker running at: "2025-06-17T12:56:00.0173882+06:00"
+2025-06-17 12:56:13 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-17 12:56:13 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-17 12:56:14 [INF] Create New Report' button clicked
+2025-06-17 12:56:18 [INF] submitButton clicked
+2025-06-17 12:56:55 [INF] Email sent Sucessfully
+2025-06-17 12:58:00 [INF] Worker running at: "2025-06-17T12:58:00.0114553+06:00"
+2025-06-17 12:58:17 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-17 12:58:17 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-17 12:58:18 [INF] Create New Report' button clicked
+2025-06-17 12:58:22 [INF] submitButton clicked
+2025-06-17 12:58:57 [INF] Email sent Sucessfully
+2025-06-17 13:00:00 [INF] Worker running at: "2025-06-17T13:00:00.0213476+06:00"
+2025-06-17 13:00:13 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-17 13:00:13 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-17 13:00:13 [INF] Create New Report' button clicked
+2025-06-17 13:00:17 [INF] submitButton clicked
+2025-06-17 13:00:55 [INF] Email sent Sucessfully
+2025-06-17 13:02:00 [INF] Worker running at: "2025-06-17T13:02:00.0345950+06:00"
+2025-06-17 13:02:11 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-17 13:02:11 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-17 13:02:11 [INF] Create New Report' button clicked
+2025-06-17 13:02:16 [INF] submitButton clicked
+2025-06-17 13:02:51 [INF] Email sent Sucessfully
+2025-06-17 13:04:00 [INF] Worker running at: "2025-06-17T13:04:00.0102245+06:00"
+2025-06-17 13:04:15 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-17 13:04:15 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-17 13:04:15 [INF] Create New Report' button clicked
+2025-06-17 13:04:19 [INF] submitButton clicked
+2025-06-17 13:04:49 [ERR] Exception Occured tab crashed
+  (Session info: chrome=137.0.7151.104)
+OpenQA.Selenium.UnsupportedOperationException: tab crashed
+  (Session info: chrome=137.0.7151.104)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.GetScreenshot()
+   at DailyPost.BackgroundWorker.Services.DailyPostService.TakeScreenShot(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Services\DailyPostService.cs:line 58
+2025-06-17 13:04:49 [ERR] Exception Occured The value cannot be an empty string. (Parameter 'fileName')
+System.ArgumentException: The value cannot be an empty string. (Parameter 'fileName')
+   at System.ArgumentException.ThrowNullOrEmptyException(String argument, String paramName)
+   at System.ArgumentException.ThrowIfNullOrEmpty(String argument, String paramName)
+   at System.Net.Mail.AttachmentBase.SetContentFromFile(String fileName, String mediaType)
+   at System.Net.Mail.Attachment..ctor(String fileName)
+   at DailyPost.BackgroundWorker.Services.DailyPostService.SendEmail(EmailInfo emailInfo) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Services\DailyPostService.cs:line 126
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 143

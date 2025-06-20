@@ -1,0 +1,135 @@
+2025-06-20 12:23:49 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 12:23:49 [INF] Adding job: DEFAULT.Worker
+2025-06-20 12:24:18 [INF] Data Comming From  api
+2025-06-20 12:24:18 [INF] Data from API has been saved to JSON file.
+2025-06-20 12:27:49 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 12:27:49 [INF] Adding job: DEFAULT.Worker
+2025-06-20 12:34:08 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 12:34:08 [INF] Adding job: DEFAULT.Worker
+2025-06-20 12:39:42 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 12:39:42 [INF] Adding job: DEFAULT.Worker
+2025-06-20 12:41:06 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 12:41:06 [INF] Adding job: DEFAULT.Worker
+2025-06-20 12:42:01 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 12:42:01 [INF] Adding job: DEFAULT.Worker
+2025-06-20 12:42:06 [INF] Worker running at: "2025-06-20T12:42:06.2883424+06:00"
+2025-06-20 12:42:35 [INF] Current URL: https://aimanager.techjays.com/login/?next=/app/
+2025-06-20 12:42:37 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-20 12:43:25 [ERR] Exception Occured no such element: Unable to locate element: {"method":"css selector","selector":"a[href='/app/reports/new/']"}
+  (Session info: chrome=137.0.7151.105); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"a[href='/app/reports/new/']"}
+  (Session info: chrome=137.0.7151.105); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__6_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 97
+2025-06-20 12:44:01 [INF] Worker running at: "2025-06-20T12:44:01.5754931+06:00"
+2025-06-20 12:44:49 [INF] Current URL: https://aimanager.techjays.com/login/?next=/app/
+2025-06-20 12:44:49 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-20 12:51:56 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 12:51:56 [INF] Adding job: DEFAULT.Worker
+2025-06-20 12:52:14 [INF] Worker running at: "2025-06-20T12:52:14.0612486+06:00"
+2025-06-20 12:52:23 [INF] Current URL: https://aimanager.techjays.com/login/?next=/app/
+2025-06-20 12:52:23 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-20 12:53:58 [ERR] Exception Occured no such element: Unable to locate element: {"method":"partial link text","selector":"Create New Report"}
+  (Session info: chrome=137.0.7151.105); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"partial link text","selector":"Create New Report"}
+  (Session info: chrome=137.0.7151.105); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__6_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context)
+2025-06-20 12:53:59 [INF] Worker running at: "2025-06-20T12:53:59.8013326+06:00"
+2025-06-20 12:54:08 [INF] Worker running at: "2025-06-20T12:54:08.4925146+06:00"
+2025-06-20 12:54:26 [INF] Current URL: https://aimanager.techjays.com/login/?next=/app/
+2025-06-20 12:54:40 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-20 12:54:41 [INF] Current URL: https://aimanager.techjays.com/login/?next=/app/
+2025-06-20 12:54:43 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-20 12:56:51 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 12:56:51 [INF] Adding job: DEFAULT.Worker
+2025-06-20 12:57:01 [INF] Worker running at: "2025-06-20T12:57:01.5521169+06:00"
+2025-06-20 13:00:27 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 13:00:27 [INF] Adding job: DEFAULT.Worker
+2025-06-20 13:01:03 [INF] Worker running at: "2025-06-20T13:01:03.1884879+06:00"
+2025-06-20 13:01:07 [ERR] Exception Occured unable to set cookie
+  (Session info: chrome=137.0.7151.105)
+OpenQA.Selenium.UnableToSetCookieException: unable to set cookie
+  (Session info: chrome=137.0.7151.105)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.CookieJar.AddCookie(Cookie cookie)
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 72
+2025-06-20 13:02:08 [INF] Worker running at: "2025-06-20T13:02:08.9164314+06:00"
+2025-06-20 13:03:10 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 13:03:10 [INF] Adding job: DEFAULT.Worker
+2025-06-20 13:04:34 [INF] Worker running at: "2025-06-20T13:04:34.0859529+06:00"
+2025-06-20 13:04:59 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-20 13:05:00 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-20 13:05:01 [INF] Worker running at: "2025-06-20T13:05:01.5034694+06:00"
+2025-06-20 13:05:07 [INF] Create New Report' button clicked
+2025-06-20 13:05:29 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 13:05:29 [INF] Adding job: DEFAULT.Worker
+2025-06-20 13:06:02 [INF] Worker running at: "2025-06-20T13:06:02.8453223+06:00"
+2025-06-20 13:06:15 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-20 13:06:16 [INF] Login with cookies succeeded and dashboard is loaded!
+2025-06-20 13:06:23 [INF] Create New Report' button clicked
+2025-06-20 13:06:30 [INF] submitButton clicked
+2025-06-20 13:40:09 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 13:40:09 [INF] Adding job: DEFAULT.Worker
+2025-06-20 13:42:04 [INF] Worker running at: "2025-06-20T13:42:04.0593395+06:00"
+2025-06-20 13:43:54 [INF] Current URL: https://aimanager.techjays.com/login/?next=/app/
+2025-06-20 13:44:37 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 13:44:37 [INF] Adding job: DEFAULT.Worker
+2025-06-20 13:46:02 [INF] Worker running at: "2025-06-20T13:46:02.6970838+06:00"
+2025-06-20 14:03:29 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 14:03:29 [INF] Adding job: DEFAULT.Worker
+2025-06-20 14:04:03 [INF] Setting up Chrome driver
+2025-06-20 14:04:04 [INF] Chrome driver setup completed
+2025-06-20 14:04:04 [INF] Starting authentication process
+2025-06-20 14:04:08 [INF] Authentication cookies added successfully
+2025-06-20 14:04:09 [INF] Navigating to dashboard and create report page
+2025-06-20 14:04:14 [INF] Current URL: https://aimanager.techjays.com/login/?next=/app/
+2025-06-20 14:04:14 [INF] Dashboard loaded successfully, navigating to create report
+2025-06-20 14:05:29 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 14:05:29 [INF] Adding job: DEFAULT.Worker
+2025-06-20 14:06:16 [INF] Adding 1 jobs, 1 triggers.
+2025-06-20 14:06:16 [INF] Adding job: DEFAULT.Worker
+2025-06-20 14:09:12 [INF] Setting up Chrome driver
+2025-06-20 14:09:13 [INF] Chrome driver setup completed
+2025-06-20 14:09:14 [INF] Starting authentication process
+2025-06-20 14:09:18 [INF] Authentication cookies added successfully
+2025-06-20 14:09:19 [INF] Navigating to dashboard and create report page
+2025-06-20 14:09:23 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-20 14:09:23 [INF] Dashboard loaded successfully, navigating to create report
+2025-06-20 14:09:23 [INF] 'Create New Report' button clicked
+2025-06-20 14:09:27 [INF] Filling and submitting report form
+2025-06-20 14:09:28 [INF] Report message entered successfully
+2025-06-20 14:09:28 [INF] Report form submitted successfully
+2025-06-20 14:09:59 [INF] Capturing screenshot and preparing email
+2025-06-20 14:09:59 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250620_140959.png
+2025-06-20 14:10:05 [INF] Setting up Chrome driver
+2025-06-20 14:10:06 [INF] Chrome driver setup completed
+2025-06-20 14:10:07 [INF] Starting authentication process
+2025-06-20 14:10:09 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-06-20 14:10:09 [INF] Daily report process completed successfully
+2025-06-20 14:10:11 [INF] Authentication cookies added successfully
+2025-06-20 14:10:12 [INF] Navigating to dashboard and create report page
+2025-06-20 14:10:16 [INF] Current URL: https://aimanager.techjays.com/app/
+2025-06-20 14:10:16 [INF] Dashboard loaded successfully, navigating to create report
+2025-06-20 14:10:17 [INF] 'Create New Report' button clicked
+2025-06-20 14:10:20 [INF] Filling and submitting report form
+2025-06-20 14:10:22 [INF] Report message entered successfully
+2025-06-20 14:10:22 [INF] Report form submitted successfully
+2025-06-20 14:10:54 [INF] Capturing screenshot and preparing email
+2025-06-20 14:10:54 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250620_141054.png
+2025-06-20 14:10:57 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-06-20 14:10:58 [INF] Daily report process completed successfully
