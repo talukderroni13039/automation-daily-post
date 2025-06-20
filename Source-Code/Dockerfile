@@ -40,7 +40,7 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
 COPY . .
-RUN dotnet restore "./DailyPost.Api/DailyPost.Api.csproj
+RUN dotnet restore "./DailyPost.Api/DailyPost.Api.csproj"
 WORKDIR "/src/DailyPost.Api"
 RUN dotnet build "DailyPost.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
