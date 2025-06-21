@@ -37,11 +37,11 @@ jobs:
       uses: docker/metadata-action@v5
       with:
         images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-        tags: |
-          type=ref,event=branch
-          type=ref,event=pr
-          type=sha,prefix={{branch}}-
-          latest
+          # tags: |
+          #  type=ref,event=branch
+          #   type=ref,event=pr
+          #   type=sha,prefix={{branch}}-
+          #    latest
     
     - name: Build and push Docker image
       id: build
@@ -50,8 +50,8 @@ jobs:
         context: ./Source-Code
         file: ./Source-Code/Dockerfile
         push: true
-        tags: ${{ steps.meta.outputs.tags }}
-        labels: ${{ steps.meta.outputs.labels }}
+         #  tags: ${{ steps.meta.outputs.tags }}
+        # labels: ${{ steps.meta.outputs.labels }}
 
   deploy-uat:
     name: Deploy to uat Server
