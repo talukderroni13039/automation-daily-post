@@ -79,6 +79,8 @@ jobs:
         docker run -d \
           --name daily-post-app \
           --restart unless-stopped \
+          -e ASPNETCORE_ENVIRONMENT=uat \
+          -v /var/daily-post/logs:/app/Logs \
           -p 8000:8080 \
           ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
     
