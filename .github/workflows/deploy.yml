@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: billing-system  # ${{ github.repository }}
 
 jobs:
   build:
@@ -36,7 +36,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v5
       with:
-        images:  billing-system-image:latest                         # ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+        images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
         tags: |
           type=ref,event=branch
           type=ref,event=pr
@@ -72,11 +72,12 @@ jobs:
     
     - name: Pull latest image
       run: |
-        docker pull billing-system-image:latest      #${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+        docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
     
     - name: Deploy new container
       run: |
-        docker run -d --name daily-post-app -e ASPNETCORE_ENVIRONMENT=uat -p 8000:8080 -v /var/daily-post/logs:/app/Logs  billing-system-image:latest
+        docker run -d --name daily-post-app -e ASPNETCORE_ENVIRONMENT=uat -p 8000:8080 -v /var/daily-post/logs:/app/Logs \
+        ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
    
     - name: Clean up stopped container images
       run: |
