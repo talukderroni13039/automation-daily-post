@@ -76,10 +76,9 @@ jobs:
     
     - name: Deploy new container
       run: |
-         docker run -e ASPNETCORE_ENVIRONMENT=uat -d --name daily-post-app -p 8000:8080 \
-									 -v /var/daily-post/logs:/app/Logs billing-system-image:latest   # ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-    
+        docker run -d --name daily-post-app -e ASPNETCORE_ENVIRONMENT=uat -p 8000:8080 -v /var/daily-post/logs:/app/Logs  billing-system-image:latest
+   
     - name: Clean up stopped container images
       run: |
-        docker system prune -f
+        docker system prune -f   
         echo "🧹 Cleaned up old Docker conatiner"
