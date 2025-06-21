@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: billing-system  # ${{ github.repository }}
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build:
@@ -37,11 +37,11 @@ jobs:
       uses: docker/metadata-action@v5
       with:
         images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          # tags: |
-          #  type=ref,event=branch
-          #   type=ref,event=pr
-          #   type=sha,prefix={{branch}}-
-          #    latest
+        tags: |
+          type=ref,event=branch
+          type=ref,event=pr
+          type=sha,prefix={{branch}}-
+          latest
     
     - name: Build and push Docker image
       id: build
@@ -50,13 +50,13 @@ jobs:
         context: ./Source-Code
         file: ./Source-Code/Dockerfile
         push: true
-        tags:  latest  #${{ steps.meta.outputs.tags }}
-       # labels: ${{ steps.meta.outputs.labels }}
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
 
-  deploy-uat:
-    name: Deploy to uat Server
+  deploy:
+    name: Deploy to Server
     needs: build
-    runs-on: uat-fe4-docker-02 runner  # This will use your uat-fe4-docker-02 runner
+    runs-on: self-hosted  # This will use your uat-fe4-docker-02 runner
     if: github.ref == 'refs/heads/main'
     
     steps:
@@ -76,11 +76,13 @@ jobs:
     
     - name: Deploy new container
       run: |
-        docker run -d --name daily-post-app -e ASPNETCORE_ENVIRONMENT=uat -p 8000:8080 -v /var/daily-post/logs:/app/Logs \
-        ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-   
-    - name: Clean up stopped container images
+        docker run -d \
+          --name daily-post-app \
+          --restart unless-stopped \
+          -p 8000:8080 \
+          ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+    
+    - name: Clean up old images
       run: |
-        docker system prune -f   
-        echo "🧹 Cleaned up old Docker conatiner"
-        
+        docker image prune -f
+        echo "🧹 Cleaned up old Docker images"
