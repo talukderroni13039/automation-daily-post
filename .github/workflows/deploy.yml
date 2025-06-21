@@ -36,7 +36,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v5
       with:
-        images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+        images:  billing-system-image:latest                         # ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
         tags: |
           type=ref,event=branch
           type=ref,event=pr
@@ -53,10 +53,10 @@ jobs:
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
 
-  deploy:
-    name: Deploy to Server
+  deploy-uat:
+    name: Deploy to uat Server
     needs: build
-    runs-on: self-hosted  # This will use your uat-fe4-docker-02 runner
+    runs-on: uat-fe4-docker-02 runner  # This will use your uat-fe4-docker-02 runner
     if: github.ref == 'refs/heads/main'
     
     steps:
@@ -72,17 +72,14 @@ jobs:
     
     - name: Pull latest image
       run: |
-        docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+        docker pull billing-system-image:latest      #${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
     
     - name: Deploy new container
       run: |
-        docker run -d \
-          --name daily-post-app \
-          --restart unless-stopped \
-          -p 8000:8080 \
-          ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+         docker run -e ASPNETCORE_ENVIRONMENT=uat -d --name daily-post-app -p 8000:8080 \
+									 -v /var/daily-post/logs:/app/Logs billing-system-image:latest   # ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
     
-    - name: Clean up old images
+    - name: Clean up stopped container images
       run: |
-        docker image prune -f
-        echo "🧹 Cleaned up old Docker images"
+        docker system prune -f
+        echo "🧹 Cleaned up old Docker conatiner"
