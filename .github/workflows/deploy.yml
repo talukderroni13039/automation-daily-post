@@ -83,6 +83,7 @@ jobs:
           -v /var/daily-post/logs:/app/Logs \
           -p 8000:8080 \
           ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+
     
     - name: Clean up old images
       run: |
