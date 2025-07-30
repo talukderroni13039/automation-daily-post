@@ -56,7 +56,7 @@ jobs:
   deploy:
     name: Deploy to Server
     needs: build
-    runs-on: daily-post  # This will use your uat-fe4-docker-02 runner
+    runs-on: [self-hosted, daily-post, Linux, X64]   # This will use your uat-fe4-docker-02 runner
     if: github.ref == 'refs/heads/main'
     
     steps:
