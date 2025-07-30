@@ -1,0 +1,210 @@
+2025-07-30 11:20:55 [INF] Adding 1 jobs, 1 triggers.
+2025-07-30 11:20:55 [INF] Adding job: DEFAULT.Worker
+2025-07-30 11:21:25 [INF] Adding 1 jobs, 1 triggers.
+2025-07-30 11:21:25 [INF] Adding job: DEFAULT.Worker
+2025-07-30 11:22:05 [INF] Setting up Chrome driver
+2025-07-30 11:22:24 [INF] Chrome driver setup completed
+2025-07-30 11:22:24 [INF] Starting authentication process
+2025-07-30 11:22:32 [INF] Authentication cookies added successfully
+2025-07-30 11:22:35 [INF] Navigating to dashboard and create report page
+2025-07-30 11:22:45 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-07-30 11:22:49 [INF] Dashboard loaded successfully, navigating to create report
+2025-07-30 11:22:55 [INF] 'Create New Report' button clicked
+2025-07-30 11:23:00 [INF] Filling and submitting report form
+2025-07-30 11:23:00 [ERR] Error occurred while filling and submitting report
+OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"textarea[x-model='newMessage']"}
+  (Session info: chrome=138.0.7204.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__6_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at DailyPost.BackgroundWorker.Worker.FillAndSubmitReport(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 151
+2025-07-30 11:23:21 [ERR] Exception Occured no such element: Unable to locate element: {"method":"css selector","selector":"textarea[x-model='newMessage']"}
+  (Session info: chrome=138.0.7204.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"textarea[x-model='newMessage']"}
+  (Session info: chrome=138.0.7204.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__6_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at DailyPost.BackgroundWorker.Worker.FillAndSubmitReport(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 151
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 32
+2025-07-30 11:25:52 [INF] Adding 1 jobs, 1 triggers.
+2025-07-30 11:25:52 [INF] Adding job: DEFAULT.Worker
+2025-07-30 11:26:06 [INF] Setting up Chrome driver
+2025-07-30 11:26:07 [INF] Chrome driver setup completed
+2025-07-30 11:26:07 [INF] Starting authentication process
+2025-07-30 11:26:14 [INF] Authentication cookies added successfully
+2025-07-30 11:26:42 [INF] Navigating to dashboard and create report page
+2025-07-30 11:26:48 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-07-30 11:26:48 [INF] Dashboard loaded successfully, navigating to create report
+2025-07-30 11:26:49 [INF] 'Create New Report' button clicked
+2025-07-30 11:26:55 [INF] Filling and submitting report form
+2025-07-30 11:27:00 [INF] Report message entered successfully
+2025-07-30 11:34:40 [INF] Adding 1 jobs, 1 triggers.
+2025-07-30 11:34:40 [INF] Adding job: DEFAULT.Worker
+2025-07-30 11:36:00 [INF] Setting up Chrome driver
+2025-07-30 11:36:03 [INF] Chrome driver setup completed
+2025-07-30 11:36:03 [INF] Starting authentication process
+2025-07-30 11:36:08 [INF] Authentication cookies added successfully
+2025-07-30 11:36:08 [INF] Navigating to dashboard and create report page
+2025-07-30 11:36:14 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-07-30 11:36:14 [INF] Dashboard loaded successfully, navigating to create report
+2025-07-30 11:36:15 [INF] 'Create New Report' button clicked
+2025-07-30 11:36:21 [INF] Filling and submitting report form
+2025-07-30 11:36:36 [INF] Report message entered successfully
+2025-07-30 11:46:11 [INF] Adding 1 jobs, 1 triggers.
+2025-07-30 11:46:11 [INF] Adding job: DEFAULT.Worker
+2025-07-30 11:48:00 [INF] Setting up Chrome driver
+2025-07-30 11:48:01 [INF] Chrome driver setup completed
+2025-07-30 11:48:01 [INF] Starting authentication process
+2025-07-30 11:48:06 [INF] Authentication cookies added successfully
+2025-07-30 11:48:06 [INF] Navigating to dashboard and create report page
+2025-07-30 11:48:11 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-07-30 11:48:11 [INF] Dashboard loaded successfully, navigating to create report
+2025-07-30 11:48:12 [INF] 'Create New Report' button clicked
+2025-07-30 11:48:18 [INF] Filling and submitting report form
+2025-07-30 11:48:39 [INF] Report message entered successfully
+2025-07-30 11:54:30 [INF] Adding 1 jobs, 1 triggers.
+2025-07-30 11:54:30 [INF] Adding job: DEFAULT.Worker
+2025-07-30 11:56:00 [INF] Setting up Chrome driver
+2025-07-30 11:56:01 [INF] Chrome driver setup completed
+2025-07-30 11:56:01 [INF] Starting authentication process
+2025-07-30 11:56:07 [INF] Authentication cookies added successfully
+2025-07-30 11:56:07 [INF] Navigating to dashboard and create report page
+2025-07-30 11:56:12 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-07-30 11:56:12 [INF] Dashboard loaded successfully, navigating to create report
+2025-07-30 11:56:13 [INF] 'Create New Report' button clicked
+2025-07-30 11:56:19 [INF] Filling and submitting report form
+2025-07-30 11:56:24 [INF] Report message entered successfully
+2025-07-30 11:58:50 [INF] Adding 1 jobs, 1 triggers.
+2025-07-30 11:58:50 [INF] Adding job: DEFAULT.Worker
+2025-07-30 12:00:00 [INF] Setting up Chrome driver
+2025-07-30 12:00:02 [INF] Chrome driver setup completed
+2025-07-30 12:00:02 [INF] Starting authentication process
+2025-07-30 12:00:07 [INF] Authentication cookies added successfully
+2025-07-30 12:00:07 [INF] Navigating to dashboard and create report page
+2025-07-30 12:00:13 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-07-30 12:00:13 [INF] Dashboard loaded successfully, navigating to create report
+2025-07-30 12:00:14 [INF] 'Create New Report' button clicked
+2025-07-30 12:00:20 [INF] Filling and submitting report form
+2025-07-30 12:00:25 [INF] Report message entered successfully
+2025-07-30 12:00:25 [INF] Report message entered successfully
+2025-07-30 12:00:30 [INF] Report form submitted successfully
+2025-07-30 12:01:02 [INF] Capturing screenshot and preparing email
+2025-07-30 12:01:02 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250730_120102.png
+2025-07-30 12:01:06 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-07-30 12:01:07 [INF] Daily report process completed successfully
+2025-07-30 12:02:00 [INF] Setting up Chrome driver
+2025-07-30 12:02:01 [INF] Chrome driver setup completed
+2025-07-30 12:02:01 [INF] Starting authentication process
+2025-07-30 12:02:06 [INF] Authentication cookies added successfully
+2025-07-30 12:02:06 [INF] Navigating to dashboard and create report page
+2025-07-30 12:02:10 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-07-30 12:02:10 [INF] Dashboard loaded successfully, navigating to create report
+2025-07-30 12:02:12 [INF] 'Create New Report' button clicked
+2025-07-30 12:02:19 [INF] Filling and submitting report form
+2025-07-30 12:02:21 [INF] Report message entered successfully
+2025-07-30 12:02:21 [INF] Report message entered successfully
+2025-07-30 12:02:22 [INF] Report form submitted successfully
+2025-07-30 12:02:52 [INF] Capturing screenshot and preparing email
+2025-07-30 12:02:52 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250730_120252.png
+2025-07-30 12:02:56 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-07-30 12:02:56 [INF] Daily report process completed successfully
+2025-07-30 12:06:31 [INF] Adding 1 jobs, 1 triggers.
+2025-07-30 12:06:31 [INF] Adding job: DEFAULT.Worker
+2025-07-30 12:08:00 [INF] Setting up Chrome driver
+2025-07-30 12:08:01 [INF] Chrome driver setup completed
+2025-07-30 12:08:01 [INF] Starting authentication process
+2025-07-30 12:08:06 [INF] Authentication cookies added successfully
+2025-07-30 12:08:06 [INF] Navigating to dashboard and create report page
+2025-07-30 12:08:12 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-07-30 12:08:12 [INF] Dashboard loaded successfully, navigating to create report
+2025-07-30 12:08:13 [INF] 'Create New Report' button clicked
+2025-07-30 12:08:42 [INF] Filling and submitting report form
+2025-07-30 12:08:49 [INF] Report message entered successfully
+2025-07-30 12:08:50 [INF] Report message entered successfully
+2025-07-30 12:08:53 [INF] Capturing screenshot and preparing email
+2025-07-30 12:08:53 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250730_120853.png
+2025-07-30 12:08:57 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-07-30 12:09:08 [INF] Daily report process completed successfully
+2025-07-30 12:15:19 [INF] Adding 1 jobs, 1 triggers.
+2025-07-30 12:15:19 [INF] Adding job: DEFAULT.Worker
+2025-07-30 12:16:00 [INF] Setting up Chrome driver
+2025-07-30 12:16:01 [INF] Chrome driver setup completed
+2025-07-30 12:16:01 [INF] Starting authentication process
+2025-07-30 12:16:06 [INF] Authentication cookies added successfully
+2025-07-30 12:16:06 [INF] Navigating to dashboard and create report page
+2025-07-30 12:16:12 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-07-30 12:16:12 [INF] Dashboard loaded successfully, navigating to create report
+2025-07-30 12:16:13 [INF] 'Create New Report' button clicked
+2025-07-30 12:16:20 [INF] Filling and submitting report form
+2025-07-30 12:16:24 [INF] Report message entered successfully
+2025-07-30 12:16:29 [INF] Capturing screenshot and preparing email
+2025-07-30 12:16:32 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250730_121629.png
+2025-07-30 12:16:32 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250730_121629.png
+2025-07-30 12:16:36 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-07-30 12:16:36 [INF] Daily report process completed successfully
+2025-07-30 12:18:00 [INF] Setting up Chrome driver
+2025-07-30 12:18:01 [INF] Chrome driver setup completed
+2025-07-30 12:18:01 [INF] Starting authentication process
+2025-07-30 12:18:06 [INF] Authentication cookies added successfully
+2025-07-30 12:18:06 [INF] Navigating to dashboard and create report page
+2025-07-30 12:18:12 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-07-30 12:18:12 [INF] Dashboard loaded successfully, navigating to create report
+2025-07-30 12:18:13 [INF] 'Create New Report' button clicked
+2025-07-30 12:20:51 [INF] Adding 1 jobs, 1 triggers.
+2025-07-30 12:20:51 [INF] Adding job: DEFAULT.Worker
+2025-07-30 12:22:00 [INF] Setting up Chrome driver
+2025-07-30 12:22:01 [INF] Chrome driver setup completed
+2025-07-30 12:22:01 [INF] Starting authentication process
+2025-07-30 12:22:06 [INF] Authentication cookies added successfully
+2025-07-30 12:22:06 [INF] Navigating to dashboard and create report page
+2025-07-30 12:22:11 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-07-30 12:22:11 [INF] Dashboard loaded successfully, navigating to create report
+2025-07-30 12:22:11 [INF] 'Create New Report' button clicked
+2025-07-30 12:22:17 [INF] Filling and submitting report form
+2025-07-30 12:22:20 [INF] Report message entered successfully
+2025-07-30 12:22:25 [INF] Capturing screenshot and preparing email
+2025-07-30 12:22:28 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250730_122225.png
+2025-07-30 12:22:28 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250730_122225.png
+2025-07-30 12:22:33 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-07-30 12:22:33 [INF] Daily report process completed successfully
+2025-07-30 12:35:54 [INF] Adding 1 jobs, 1 triggers.
+2025-07-30 12:35:54 [INF] Adding job: DEFAULT.Worker
+2025-07-30 12:36:00 [INF] Setting up Chrome driver
+2025-07-30 12:36:02 [INF] Chrome driver setup completed
+2025-07-30 12:36:02 [INF] Starting authentication process
+2025-07-30 12:36:07 [INF] Authentication cookies added successfully
+2025-07-30 12:36:07 [INF] Navigating to dashboard and create report page
+2025-07-30 12:36:12 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-07-30 12:36:12 [INF] Dashboard loaded successfully, navigating to create report
+2025-07-30 12:36:13 [INF] 'Create New Report' button clicked
+2025-07-30 12:36:24 [INF] Filling and submitting report form
+2025-07-30 12:36:27 [INF] Report message entered successfully
+2025-07-30 12:36:33 [INF] Capturing screenshot and preparing email
+2025-07-30 12:36:36 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250730_123633.png
+2025-07-30 12:36:36 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250730_123633.png
+2025-07-30 12:36:41 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-07-30 12:36:41 [INF] Daily report process completed successfully
+2025-07-30 12:38:00 [INF] Setting up Chrome driver
+2025-07-30 12:38:01 [INF] Chrome driver setup completed
+2025-07-30 12:38:01 [INF] Starting authentication process
+2025-07-30 12:38:06 [INF] Authentication cookies added successfully
+2025-07-30 12:38:06 [INF] Navigating to dashboard and create report page
+2025-07-30 12:38:11 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-07-30 12:38:11 [INF] Dashboard loaded successfully, navigating to create report
+2025-07-30 12:38:12 [INF] 'Create New Report' button clicked
+2025-07-30 12:38:15 [INF] Filling and submitting report form
+2025-07-30 12:38:19 [INF] Adding 1 jobs, 1 triggers.
+2025-07-30 12:38:19 [INF] Adding job: DEFAULT.Worker
+2025-07-30 12:40:03 [ERR] Exception Occured Attempted to divide by zero.
+System.DivideByZeroException: Attempted to divide by zero.
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 32
+2025-07-30 12:40:07 [INF] Exception Email sent successfully to: talukder.roni.ict@gmail.com

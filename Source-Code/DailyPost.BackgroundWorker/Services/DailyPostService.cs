@@ -1,11 +1,12 @@
 ﻿using Microsoft.Extensions.Configuration;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using Serilog;
+using System.Net;
 using System.Net.Mail;
 using System.Net.Mime;
-using System.Net;
 using System.Text;
 using System.Text.Json;
-using Serilog;
 namespace DailyPost.BackgroundWorker.Services
 {
     public class DailyPostService : IDailyPostService
@@ -37,7 +38,7 @@ namespace DailyPost.BackgroundWorker.Services
                 return null;
             }
         }
-        public async Task<string> TakeScreenShot(IWebDriver driver)
+        public async Task<string> TakeScreenShotd(IWebDriver driver)
         {
             try
             {
@@ -65,7 +66,60 @@ namespace DailyPost.BackgroundWorker.Services
                 return string.Empty;
             }
         }
+        public async Task<string> TakeScreenShot(IWebDriver driver)
+        {
+            try
+            {
+                var screenshotDir = Path.Combine(Directory.GetCurrentDirectory(), "Screenshot");
+                string fileName = $"ReportConfirmation_{DateTime.Now:yyyyMMdd_HHmmss}.png";
+                string screenshotPath = Path.Combine(screenshotDir, fileName);
 
+                Directory.CreateDirectory(screenshotDir);
+
+                // Delete all existing files in the screenshot directory
+                foreach (string file in Directory.GetFiles(screenshotDir))
+                {
+                    File.Delete(file);
+                }
+
+                // 🔥 WORKING FULL PAGE SCREENSHOT (Standard Selenium)
+                // Store original window size
+                var originalSize = driver.Manage().Window.Size;
+
+                // Get full page dimensions
+                var totalHeight = (long)((IJavaScriptExecutor)driver)
+                    .ExecuteScript("return document.documentElement.scrollHeight");
+
+                var totalWidth = (long)((IJavaScriptExecutor)driver)
+                    .ExecuteScript("return document.documentElement.scrollWidth");
+
+                // Set window to capture full page (make it bigger, not smaller)
+                int newWidth = Math.Max(1920, (int)totalWidth);
+                int newHeight = Math.Max(1080, (int)totalHeight);
+
+                driver.Manage().Window.Size = new System.Drawing.Size(newWidth, newHeight);
+                await Task.Delay(2000); // Wait for resize
+
+                // Scroll to top
+                ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(0, 0)");
+                await Task.Delay(1000);
+
+                // Take screenshot
+                Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+                screenshot.SaveAsFile(screenshotPath);
+
+                // Restore original size
+                driver.Manage().Window.Size = originalSize;
+
+                Log.Information("Full page screenshot saved at: {screenshotPath}", screenshotPath);
+                return screenshotPath;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Exception Occurred " + ex.Message);
+                return string.Empty;
+            }
+        }
         public async Task<bool> SendEmail(EmailInfo emailInfo)
         {
             // Email configuration

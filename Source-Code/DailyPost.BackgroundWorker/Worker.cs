@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using Quartz;
 using Serilog;
 using System.IO;
@@ -26,6 +27,9 @@ namespace DailyPost.BackgroundWorker
 
             try
             {
+                var s = 0;
+                var i = 1;
+                var r = i / s;
                 (driver, userDataDir) = SetupChromeDriver();
                 await AuthenticateWithCookies(driver);    // Authenticate with cookies
                 await NavigateToCreateReport(driver);   // Navigate to create report page
@@ -33,11 +37,12 @@ namespace DailyPost.BackgroundWorker
                 await CaptureScreenshotAndSendEmail(driver); // Capture screenshot and send email
 
                 Log.Information("Daily report process completed successfully");
-
+              
             }
             catch (Exception ex)
             {
                 Log.Error(ex,"Exception Occured "+ ex.Message);
+                await  SendEmailForException(ex.Message);
             }
        
         }
@@ -134,7 +139,7 @@ namespace DailyPost.BackgroundWorker
             Log.Information("Dashboard loaded successfully, navigating to create report");
 
             // Click on "Create New Report" link
-            var createReportLink = driver.FindElement(By.CssSelector("a[href='/app/reports/new/']"));
+            var createReportLink = driver.FindElement(By.CssSelector("a[href='/app/reports/']"));
             createReportLink.Click();
 
             Log.Information("'Create New Report' button clicked");
@@ -144,33 +149,23 @@ namespace DailyPost.BackgroundWorker
         private async Task FillAndSubmitReport(IWebDriver driver)
         {
             Log.Information("Filling and submitting report form");
-
             try
             {
-                // Find the textarea for the report message
-                var textarea = driver.FindElement(By.CssSelector("textarea[x-model='newMessage']"));
-
-                // Generate the status message
+                var textarea = driver.FindElement(By.Id("chatInputConv"));
                 Message message = await _iDailyPostService.ReadMessageFromJsonFile();
                 var status = await GenerateStatusMessage(message);
 
-                // Fill the form
                 textarea.SendKeys(status);
-                await Task.Delay(1000); // Let the JS bindings process the input
-
+                await Task.Delay(3000);
                 Log.Information("Report message entered successfully");
+                textarea.SendKeys(Keys.Enter);
+                await Task.Delay(5000);
 
-                // Submit the form
-                var submitButton = driver.FindElement(By.CssSelector("button[type='submit']"));
-                submitButton.Click();
-
-                Log.Information("Report form submitted successfully");
-                await Task.Delay(30000); // Wait for submission to complete
             }
             catch (Exception ex)
             {
                 Log.Error(ex, "Error occurred while filling and submitting report");
-                throw;
+                throw ex;
             }
         }
 
@@ -248,8 +243,6 @@ namespace DailyPost.BackgroundWorker
             }
         }
 
-
-
         private async Task<string> GenerateStatusMessage(Message message)
         {
             // Split the comma-separated values
@@ -289,5 +282,38 @@ namespace DailyPost.BackgroundWorker
 
             //"I have worked 6 hours on Project X for the task API Integration and 2 hours on Project Y for the task Task 2; additional notes: Completed all required test cases."
         }
+
+        private async Task<bool> SendEmailForException(string exception)
+        {
+            // Prepare email details
+            string emailTemplate = _iConfiguration.GetValue<string>("ReceiverEmail:EmailTemplateForException");
+            string subjectTemplate = _iConfiguration.GetValue<string>("ReceiverEmail:ExceptionSubjectTemplate");
+            string recipientEmail = _iConfiguration.GetValue<string>("ReceiverEmail:Email");
+            string recipientName = _iConfiguration.GetValue<string>("ReceiverEmail:RecipientName");
+
+            if (string.IsNullOrEmpty(recipientEmail))
+            {
+                throw new InvalidOperationException("Recipient email is not configured");
+            }
+
+            string formattedDate = DateTime.Now.ToString("dd/MM/yyyy");
+            string emailBody = string.Format(emailTemplate, recipientName, formattedDate,exception);
+            string subject = string.Format(subjectTemplate, formattedDate);
+
+            // Send email with screenshot
+            EmailInfo emailInfo = new EmailInfo()
+            {
+                To = recipientEmail,
+                Subject = subject,
+                Body = emailBody,
+                Files = null
+            };
+
+            await _iDailyPostService.SendEmail(emailInfo);
+            Log.Information("Exception Email sent successfully to: {email}", recipientEmail);
+            return true;
+
+        }
+
     }
 }
