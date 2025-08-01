@@ -27,9 +27,6 @@ namespace DailyPost.BackgroundWorker
 
             try
             {
-                var s = 0;
-                var i = 1;
-                var r = i / s;
                 (driver, userDataDir) = SetupChromeDriver();
                 await AuthenticateWithCookies(driver);    // Authenticate with cookies
                 await NavigateToCreateReport(driver);   // Navigate to create report page
