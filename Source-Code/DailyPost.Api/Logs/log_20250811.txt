@@ -1,0 +1,124 @@
+2025-08-11 11:04:28 [INF] Adding 1 jobs, 1 triggers.
+2025-08-11 11:04:28 [INF] Adding job: DEFAULT.Worker
+2025-08-11 11:06:01 [INF] Setting up Chrome driver
+2025-08-11 11:06:09 [INF] Chrome driver setup completed
+2025-08-11 11:06:12 [INF] Starting authentication process
+2025-08-11 11:06:39 [INF] Authentication cookies added successfully
+2025-08-11 11:06:48 [INF] Navigating to dashboard and create report page
+2025-08-11 11:06:55 [INF] Current URL: https://aimanager.techjays.com/login/?next=/app/reports/
+2025-08-11 11:07:00 [INF] Dashboard loaded successfully, navigating to create report
+2025-08-11 11:08:53 [ERR] Exception Occured no such element: Unable to locate element: {"method":"css selector","selector":"a[href='/app/reports/']"}
+  (Session info: chrome=139.0.7258.66); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"a[href='/app/reports/']"}
+  (Session info: chrome=139.0.7258.66); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.By.<.ctor>b__6_0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.WebDriver.FindElement(By by)
+   at DailyPost.BackgroundWorker.Worker.NavigateToCreateReport(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 139
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 32
+2025-08-11 11:08:53 [INF] Setting up Chrome driver
+2025-08-11 11:08:57 [INF] Chrome driver setup completed
+2025-08-11 11:09:01 [INF] Starting authentication process
+2025-08-11 11:09:06 [INF] Authentication cookies added successfully
+2025-08-11 11:09:06 [INF] Navigating to dashboard and create report page
+2025-08-11 11:09:11 [INF] Current URL: https://aimanager.techjays.com/login/?next=/app/reports/
+2025-08-11 11:15:01 [INF] Adding 1 jobs, 1 triggers.
+2025-08-11 11:15:01 [INF] Adding job: DEFAULT.Worker
+2025-08-11 11:16:00 [INF] Setting up Chrome driver
+2025-08-11 11:16:01 [INF] Chrome driver setup completed
+2025-08-11 11:16:08 [INF] Starting authentication process
+2025-08-11 11:16:29 [INF] Authentication cookies added successfully
+2025-08-11 11:16:30 [INF] Navigating to dashboard and create report page
+2025-08-11 11:16:35 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-08-11 11:20:50 [INF] Adding 1 jobs, 1 triggers.
+2025-08-11 11:20:50 [INF] Adding job: DEFAULT.Worker
+2025-08-11 11:22:00 [INF] Setting up Chrome driver
+2025-08-11 11:22:01 [INF] Chrome driver setup completed
+2025-08-11 11:22:04 [INF] Starting authentication process
+2025-08-11 11:22:15 [INF] Authentication cookies added successfully
+2025-08-11 11:22:15 [INF] Navigating to dashboard and create report page
+2025-08-11 11:23:09 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-08-11 11:23:26 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-08-11 11:23:28 [INF] Dashboard loaded successfully, navigating to create report
+2025-08-11 11:23:32 [INF] 'Create New Report' button clicked
+2025-08-11 11:23:39 [INF] Filling and submitting report form
+2025-08-11 11:23:39 [ERR] Error occurred while filling and submitting report
+OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=139.0.7258.66)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.SendKeys(String text)
+   at DailyPost.BackgroundWorker.Worker.FillAndSubmitReport(IWebDriver driver)
+2025-08-11 11:23:39 [ERR] Exception Occured element not interactable
+  (Session info: chrome=139.0.7258.66)
+OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=139.0.7258.66)
+   at DailyPost.BackgroundWorker.Worker.FillAndSubmitReport(IWebDriver driver)
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context)
+2025-08-11 11:24:00 [INF] Setting up Chrome driver
+2025-08-11 11:24:01 [INF] Chrome driver setup completed
+2025-08-11 11:24:02 [INF] Starting authentication process
+2025-08-11 11:24:08 [INF] Authentication cookies added successfully
+2025-08-11 11:24:08 [INF] Navigating to dashboard and create report page
+2025-08-11 11:24:14 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-08-11 11:24:21 [INF] Dashboard loaded successfully, navigating to create report
+2025-08-11 11:24:26 [INF] 'Create New Report' button clicked
+2025-08-11 11:24:38 [INF] Filling and submitting report form
+2025-08-11 11:25:15 [ERR] Error occurred while filling and submitting report
+OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=139.0.7258.66)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.SendKeys(String text)
+   at DailyPost.BackgroundWorker.Worker.FillAndSubmitReport(IWebDriver driver)
+2025-08-11 11:25:16 [ERR] Exception Occured element not interactable
+  (Session info: chrome=139.0.7258.66)
+OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=139.0.7258.66)
+   at DailyPost.BackgroundWorker.Worker.FillAndSubmitReport(IWebDriver driver)
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context)
+2025-08-11 11:26:00 [INF] Setting up Chrome driver
+2025-08-11 11:26:01 [INF] Chrome driver setup completed
+2025-08-11 11:26:03 [INF] Starting authentication process
+2025-08-11 11:26:09 [INF] Authentication cookies added successfully
+2025-08-11 11:26:09 [INF] Navigating to dashboard and create report page
+2025-08-11 11:26:14 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-08-11 11:26:20 [INF] Dashboard loaded successfully, navigating to create report
+2025-08-11 11:26:24 [INF] 'Create New Report' button clicked
+2025-08-11 11:26:31 [INF] Filling and submitting report form
+2025-08-11 11:27:13 [ERR] Error occurred while filling and submitting report
+OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=139.0.7258.66)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.SendKeys(String text)
+   at DailyPost.BackgroundWorker.Worker.FillAndSubmitReport(IWebDriver driver)
+2025-08-11 11:27:15 [ERR] Exception Occured element not interactable
+  (Session info: chrome=139.0.7258.66)
+OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=139.0.7258.66)
+   at DailyPost.BackgroundWorker.Worker.FillAndSubmitReport(IWebDriver driver)
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context)
+2025-08-11 11:28:00 [INF] Setting up Chrome driver
+2025-08-11 11:28:01 [INF] Chrome driver setup completed
+2025-08-11 11:28:03 [INF] Starting authentication process
+2025-08-11 11:28:21 [INF] Authentication cookies added successfully
+2025-08-11 11:28:24 [INF] Navigating to dashboard and create report page
+2025-08-11 11:28:29 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-08-11 11:28:29 [INF] Dashboard loaded successfully, navigating to create report
+2025-08-11 11:28:29 [INF] 'Create New Report' button clicked
+2025-08-11 11:28:35 [INF] Filling and submitting report form
+2025-08-11 11:29:30 [INF] Report message entered successfully
+2025-08-11 11:29:37 [INF] Capturing screenshot and preparing email
+2025-08-11 11:29:40 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250811_112937.png
+2025-08-11 11:29:40 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250811_112937.png

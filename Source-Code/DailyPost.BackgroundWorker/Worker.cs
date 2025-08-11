@@ -128,7 +128,7 @@ namespace DailyPost.BackgroundWorker
             string currentUrl = driver.Url;
             Log.Information("Current URL: {url}", currentUrl);
 
-            if (!currentUrl.Contains("/app"))
+            if (currentUrl.Contains("/login"))
             {
                 throw new InvalidOperationException("Authentication failed - not redirected to dashboard");
             }
@@ -148,7 +148,7 @@ namespace DailyPost.BackgroundWorker
             Log.Information("Filling and submitting report form");
             try
             {
-                var textarea = driver.FindElement(By.Id("chatInputConv"));
+                var textarea = driver.FindElement(By.Id("chatInput"));
                 Message message = await _iDailyPostService.ReadMessageFromJsonFile();
                 var status = await GenerateStatusMessage(message);
 
