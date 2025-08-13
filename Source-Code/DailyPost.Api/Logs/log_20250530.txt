@@ -1,2 +1,0 @@
-2025-05-30 16:38:22 [INF] Adding 1 jobs, 1 triggers.
-2025-05-30 16:38:22 [INF] Adding job: DEFAULT.Worker

@@ -1,0 +1,25 @@
+2025-08-13 12:04:59 [INF] Adding 1 jobs, 1 triggers.
+2025-08-13 12:04:59 [INF] Adding job: DEFAULT.Worker
+2025-08-13 12:06:02 [INF] Setting up Chrome driver
+2025-08-13 12:06:14 [INF] Chrome driver setup completed
+2025-08-13 12:06:35 [INF] Starting authentication process
+2025-08-13 12:06:52 [INF] Authentication cookies added successfully
+2025-08-13 12:07:18 [INF] Navigating to dashboard and create report page
+2025-08-13 12:07:51 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-08-13 12:07:53 [INF] Dashboard loaded successfully, navigating to create report
+2025-08-13 12:09:47 [INF] Adding 1 jobs, 1 triggers.
+2025-08-13 12:09:47 [INF] Adding job: DEFAULT.Worker
+2025-08-13 12:10:00 [INF] Setting up Chrome driver
+2025-08-13 12:10:01 [INF] Chrome driver setup completed
+2025-08-13 12:10:01 [INF] Starting authentication process
+2025-08-13 12:10:17 [INF] Authentication cookies added successfully
+2025-08-13 12:10:20 [INF] Navigating to dashboard and create report page
+2025-08-13 12:10:43 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-08-13 12:10:44 [INF] Dashboard loaded successfully, navigating to create report
+2025-08-13 12:10:46 [INF] Filling and submitting report form
+2025-08-13 12:10:52 [INF] Report message entered successfully
+2025-08-13 12:10:57 [INF] Capturing screenshot and preparing email
+2025-08-13 12:11:00 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250813_121057.png
+2025-08-13 12:11:00 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250813_121057.png
+2025-08-13 12:11:07 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-08-13 12:11:07 [INF] Daily report process completed successfully

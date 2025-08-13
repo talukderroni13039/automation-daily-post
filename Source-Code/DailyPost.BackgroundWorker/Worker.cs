@@ -136,11 +136,11 @@ namespace DailyPost.BackgroundWorker
             Log.Information("Dashboard loaded successfully, navigating to create report");
 
             // Click on "Create New Report" link
-            var createReportLink = driver.FindElement(By.CssSelector("a[href='/app/reports/']"));
-            createReportLink.Click();
+            //    var createReportLink = driver.FindElement(By.CssSelector("a[href='/app/reports/']"));
+            //   createReportLink.Click();
 
-            Log.Information("'Create New Report' button clicked");
-            await Task.Delay(3000); // Wait for navigation
+           //  Log.Information("'Create New Report' button clicked");
+           //  await Task.Delay(3000); // Wait for navigation
         }
 
         private async Task FillAndSubmitReport(IWebDriver driver)
@@ -148,7 +148,7 @@ namespace DailyPost.BackgroundWorker
             Log.Information("Filling and submitting report form");
             try
             {
-                var textarea = driver.FindElement(By.Id("chatInput"));
+                var textarea = driver.FindElement(By.Id("chatInputConv"));
                 Message message = await _iDailyPostService.ReadMessageFromJsonFile();
                 var status = await GenerateStatusMessage(message);
 
