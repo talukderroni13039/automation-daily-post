@@ -1,0 +1,592 @@
+2025-09-24 17:47:33 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 17:47:33 [INF] Adding job: DEFAULT.Worker
+2025-09-24 17:48:02 [INF] Setting up Chrome driver
+2025-09-24 17:48:25 [INF] Chrome driver setup completed
+2025-09-24 17:48:25 [INF] Starting authentication process
+2025-09-24 17:48:33 [INF] Authentication cookies added successfully
+2025-09-24 17:49:06 [INF] Navigating to dashboard and create report page
+2025-09-24 17:49:26 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 17:49:34 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 17:49:42 [INF] Filling and submitting report form
+2025-09-24 17:53:52 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 17:53:52 [INF] Adding job: DEFAULT.Worker
+2025-09-24 17:54:00 [INF] Setting up Chrome driver
+2025-09-24 17:54:01 [INF] Chrome driver setup completed
+2025-09-24 17:54:01 [INF] Starting authentication process
+2025-09-24 17:54:12 [INF] Authentication cookies added successfully
+2025-09-24 17:54:47 [INF] Navigating to dashboard and create report page
+2025-09-24 17:54:58 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 17:54:58 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 17:55:23 [INF] Filling and submitting report form
+2025-09-24 17:55:30 [INF] Report message entered successfully
+2025-09-24 17:56:58 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 17:56:58 [INF] Adding job: DEFAULT.Worker
+2025-09-24 17:58:00 [INF] Setting up Chrome driver
+2025-09-24 17:58:01 [INF] Chrome driver setup completed
+2025-09-24 17:58:01 [INF] Starting authentication process
+2025-09-24 17:58:33 [INF] Authentication cookies added successfully
+2025-09-24 17:58:42 [INF] Navigating to dashboard and create report page
+2025-09-24 17:58:59 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 17:58:59 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 17:59:02 [INF] Filling and submitting report form
+2025-09-24 17:59:40 [INF] Report message entered successfully
+2025-09-24 17:59:55 [INF] Capturing screenshot and preparing email
+2025-09-24 17:59:58 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_175955.png
+2025-09-24 17:59:58 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_175955.png
+2025-09-24 18:00:00 [INF] Setting up Chrome driver
+2025-09-24 18:00:01 [INF] Chrome driver setup completed
+2025-09-24 18:00:01 [INF] Starting authentication process
+2025-09-24 18:00:06 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 18:00:08 [INF] Daily report process completed successfully
+2025-09-24 18:00:09 [INF] Authentication cookies added successfully
+2025-09-24 18:14:03 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 18:14:03 [INF] Adding job: DEFAULT.Worker
+2025-09-24 18:16:00 [INF] Setting up Chrome driver
+2025-09-24 18:16:02 [INF] Chrome driver setup completed
+2025-09-24 18:16:02 [INF] Starting authentication process
+2025-09-24 18:16:07 [INF] Authentication cookies added successfully
+2025-09-24 18:16:14 [INF] Navigating to dashboard and create report page
+2025-09-24 18:16:25 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 18:16:25 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 18:16:35 [INF] Filling and submitting report form
+2025-09-24 18:16:44 [INF] Report message entered successfully
+2025-09-24 18:22:44 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 18:22:44 [INF] Adding job: DEFAULT.Worker
+2025-09-24 18:24:00 [INF] Setting up Chrome driver
+2025-09-24 18:24:01 [INF] Chrome driver setup completed
+2025-09-24 18:24:01 [INF] Starting authentication process
+2025-09-24 18:25:39 [ERR] Exception Occured The HTTP request to the remote WebDriver server for URL http://localhost:5427/session/465095a3d6b1da218ea0e488b39b9cc3/url timed out after 60 seconds.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:5427/session/465095a3d6b1da218ea0e488b39b9cc3/url timed out after 60 seconds.
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 60 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.ExecuteAsync(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Navigator.GoToUrlAsync(String url)
+   at OpenQA.Selenium.Navigator.<>c__DisplayClass6_0.<<GoToUrl>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenQA.Selenium.Navigator.GoToUrl(String url)
+   at DailyPost.BackgroundWorker.Worker.AuthenticateWithCookies(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 91
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 33
+2025-09-24 18:25:57 [INF] Exception Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 18:26:00 [INF] Setting up Chrome driver
+2025-09-24 18:26:01 [INF] Chrome driver setup completed
+2025-09-24 18:26:01 [INF] Starting authentication process
+2025-09-24 18:26:15 [INF] Authentication cookies added successfully
+2025-09-24 18:26:17 [INF] Navigating to dashboard and create report page
+2025-09-24 18:26:33 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 18:26:33 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 18:26:44 [INF] Filling and submitting report form
+2025-09-24 18:26:50 [INF] Report message entered successfully
+2025-09-24 18:27:03 [INF] Capturing screenshot and preparing email
+2025-09-24 18:27:06 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_182703.png
+2025-09-24 18:27:06 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_182703.png
+2025-09-24 18:27:26 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 18:27:26 [INF] Daily report process completed successfully
+2025-09-24 18:28:00 [INF] Setting up Chrome driver
+2025-09-24 18:28:01 [INF] Chrome driver setup completed
+2025-09-24 18:28:01 [INF] Starting authentication process
+2025-09-24 18:28:36 [INF] Authentication cookies added successfully
+2025-09-24 18:28:43 [INF] Navigating to dashboard and create report page
+2025-09-24 18:29:15 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 18:29:15 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 18:29:35 [INF] Filling and submitting report form
+2025-09-24 18:29:44 [INF] Report message entered successfully
+2025-09-24 18:30:39 [INF] Setting up Chrome driver
+2025-09-24 18:30:52 [INF] Chrome driver setup completed
+2025-09-24 18:30:52 [INF] Starting authentication process
+2025-09-24 18:30:58 [INF] Capturing screenshot and preparing email
+2025-09-24 18:31:02 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_183058.png
+2025-09-24 18:31:02 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_183058.png
+2025-09-24 18:31:13 [INF] Authentication cookies added successfully
+2025-09-24 18:38:24 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 18:38:24 [INF] Adding job: DEFAULT.Worker
+2025-09-24 18:40:00 [INF] Setting up Chrome driver
+2025-09-24 18:40:02 [INF] Chrome driver setup completed
+2025-09-24 18:40:02 [INF] Starting authentication process
+2025-09-24 18:41:08 [ERR] Exception Occured The HTTP request to the remote WebDriver server for URL http://localhost:6297/session/269d51bf75042b16107dd8da1e8f5546/url timed out after 60 seconds.
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:6297/session/269d51bf75042b16107dd8da1e8f5546/url timed out after 60 seconds.
+ ---> System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 60 seconds elapsing.
+ ---> System.TimeoutException: The operation was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was canceled.
+ ---> System.IO.IOException: Unable to read data from the transport connection: The I/O operation has been aborted because of either a thread exit or an application request..
+ ---> System.Net.Sockets.SocketException (995): The I/O operation has been aborted because of either a thread exit or an application request.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(Command commandToExecute)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.ExecuteAsync(Command commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Navigator.GoToUrlAsync(String url)
+   at OpenQA.Selenium.Navigator.<>c__DisplayClass6_0.<<GoToUrl>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OpenQA.Selenium.Navigator.GoToUrl(String url)
+   at DailyPost.BackgroundWorker.Worker.AuthenticateWithCookies(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 91
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 33
+2025-09-24 18:41:20 [INF] Exception Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 18:42:00 [INF] Setting up Chrome driver
+2025-09-24 18:42:01 [INF] Chrome driver setup completed
+2025-09-24 18:42:01 [INF] Starting authentication process
+2025-09-24 18:42:07 [INF] Authentication cookies added successfully
+2025-09-24 18:42:12 [INF] Navigating to dashboard and create report page
+2025-09-24 18:42:22 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 18:42:22 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 18:42:22 [INF] Filling and submitting report form
+2025-09-24 18:42:26 [INF] Report message entered successfully
+2025-09-24 18:42:31 [INF] Capturing screenshot and preparing email
+2025-09-24 18:42:34 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_184231.png
+2025-09-24 18:42:34 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_184231.png
+2025-09-24 18:42:41 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 18:42:41 [INF] Daily report process completed successfully
+2025-09-24 18:44:00 [INF] Setting up Chrome driver
+2025-09-24 18:44:01 [INF] Chrome driver setup completed
+2025-09-24 18:44:01 [INF] Starting authentication process
+2025-09-24 18:44:10 [INF] Authentication cookies added successfully
+2025-09-24 18:44:14 [INF] Navigating to dashboard and create report page
+2025-09-24 18:44:19 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 18:44:19 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 18:44:22 [INF] Filling and submitting report form
+2025-09-24 18:44:38 [INF] Report message entered successfully
+2025-09-24 18:44:56 [INF] Capturing screenshot and preparing email
+2025-09-24 18:45:00 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_184456.png
+2025-09-24 18:45:00 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_184456.png
+2025-09-24 18:45:06 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 18:46:20 [INF] Daily report process completed successfully
+2025-09-24 18:46:20 [INF] Setting up Chrome driver
+2025-09-24 18:46:22 [INF] Chrome driver setup completed
+2025-09-24 18:46:22 [INF] Starting authentication process
+2025-09-24 18:46:28 [INF] Authentication cookies added successfully
+2025-09-24 18:50:55 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 18:50:55 [INF] Adding job: DEFAULT.Worker
+2025-09-24 18:52:00 [INF] Setting up Chrome driver
+2025-09-24 18:52:05 [INF] Chrome driver setup completed
+2025-09-24 18:52:05 [INF] Starting authentication process
+2025-09-24 18:52:17 [INF] Authentication cookies added successfully
+2025-09-24 18:52:17 [INF] Navigating to dashboard and create report page
+2025-09-24 18:52:27 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 18:52:27 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 18:52:30 [INF] Filling and submitting report form
+2025-09-24 18:52:36 [INF] Report message entered successfully
+2025-09-24 18:52:44 [INF] Capturing screenshot and preparing email
+2025-09-24 18:52:47 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_185244.png
+2025-09-24 18:52:47 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_185244.png
+2025-09-24 18:52:54 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 18:52:55 [INF] Daily report process completed successfully
+2025-09-24 18:54:00 [INF] Setting up Chrome driver
+2025-09-24 18:54:01 [INF] Chrome driver setup completed
+2025-09-24 18:54:01 [INF] Starting authentication process
+2025-09-24 18:55:25 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 18:55:25 [INF] Adding job: DEFAULT.Worker
+2025-09-24 18:56:00 [INF] Setting up Chrome driver
+2025-09-24 18:56:01 [INF] Chrome driver setup completed
+2025-09-24 18:56:01 [INF] Starting authentication process
+2025-09-24 18:56:06 [INF] Authentication cookies added successfully
+2025-09-24 18:56:06 [INF] Navigating to dashboard and create report page
+2025-09-24 18:56:18 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 18:56:18 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 18:56:34 [INF] Filling and submitting report form
+2025-09-24 18:57:02 [ERR] Error occurred while filling and submitting report
+OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=140.0.7339.129)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.SendKeys(String text)
+   at DailyPost.BackgroundWorker.Worker.FillAndSubmitReport(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 159
+2025-09-24 18:57:04 [ERR] Exception Occured element not interactable
+  (Session info: chrome=140.0.7339.129)
+OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=140.0.7339.129)
+   at DailyPost.BackgroundWorker.Worker.FillAndSubmitReport(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 192
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 35
+2025-09-24 18:57:11 [INF] Exception Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 18:58:00 [INF] Setting up Chrome driver
+2025-09-24 18:58:01 [INF] Chrome driver setup completed
+2025-09-24 18:58:01 [INF] Starting authentication process
+2025-09-24 18:58:06 [INF] Authentication cookies added successfully
+2025-09-24 18:58:06 [INF] Navigating to dashboard and create report page
+2025-09-24 18:58:15 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 18:58:15 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 18:58:15 [INF] Filling and submitting report form
+2025-09-24 18:58:15 [ERR] Error occurred while filling and submitting report
+OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=140.0.7339.129)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.SendKeys(String text)
+   at DailyPost.BackgroundWorker.Worker.FillAndSubmitReport(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 159
+2025-09-24 18:58:15 [ERR] Exception Occured element not interactable
+  (Session info: chrome=140.0.7339.129)
+OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=140.0.7339.129)
+   at DailyPost.BackgroundWorker.Worker.FillAndSubmitReport(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 192
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 35
+2025-09-24 18:58:24 [INF] Exception Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 18:59:13 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 18:59:13 [INF] Adding job: DEFAULT.Worker
+2025-09-24 19:00:00 [INF] Setting up Chrome driver
+2025-09-24 19:00:02 [INF] Chrome driver setup completed
+2025-09-24 19:00:02 [INF] Starting authentication process
+2025-09-24 19:00:10 [INF] Authentication cookies added successfully
+2025-09-24 19:00:10 [INF] Navigating to dashboard and create report page
+2025-09-24 19:00:31 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:00:31 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:00:31 [INF] Filling and submitting report form
+2025-09-24 19:00:35 [ERR] Error occurred while filling and submitting report
+OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=140.0.7339.129)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.SendKeys(String text)
+   at DailyPost.BackgroundWorker.Worker.FillAndSubmitReport(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 159
+2025-09-24 19:00:36 [ERR] Exception Occured element not interactable
+  (Session info: chrome=140.0.7339.129)
+OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=140.0.7339.129)
+   at DailyPost.BackgroundWorker.Worker.FillAndSubmitReport(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 192
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 35
+2025-09-24 19:06:42 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 19:06:42 [INF] Adding job: DEFAULT.Worker
+2025-09-24 19:08:00 [INF] Setting up Chrome driver
+2025-09-24 19:08:01 [INF] Chrome driver setup completed
+2025-09-24 19:08:01 [INF] Starting authentication process
+2025-09-24 19:08:08 [INF] Authentication cookies added successfully
+2025-09-24 19:08:08 [INF] Navigating to dashboard and create report page
+2025-09-24 19:08:19 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:08:19 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:08:19 [INF] Filling and submitting report form
+2025-09-24 19:08:49 [INF] Message entered
+2025-09-24 19:09:49 [ERR] Error occurred while filling and submitting report
+OpenQA.Selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=140.0.7339.129)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebElement.Click()
+   at DailyPost.BackgroundWorker.Worker.FillAndSubmitReport(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 168
+2025-09-24 19:10:47 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 19:10:47 [INF] Adding job: DEFAULT.Worker
+2025-09-24 19:12:00 [INF] Setting up Chrome driver
+2025-09-24 19:12:02 [INF] Chrome driver setup completed
+2025-09-24 19:12:02 [INF] Starting authentication process
+2025-09-24 19:12:37 [INF] Authentication cookies added successfully
+2025-09-24 19:12:37 [INF] Navigating to dashboard and create report page
+2025-09-24 19:13:10 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:13:10 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:13:10 [INF] Filling and submitting report form
+2025-09-24 19:13:28 [INF] Message entered
+2025-09-24 19:13:35 [INF] Send button clicked
+2025-09-24 19:13:41 [INF] Capturing screenshot and preparing email
+2025-09-24 19:13:44 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_191341.png
+2025-09-24 19:13:44 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_191341.png
+2025-09-24 19:13:52 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 19:13:54 [INF] Daily report process completed successfully
+2025-09-24 19:14:00 [INF] Setting up Chrome driver
+2025-09-24 19:14:01 [INF] Chrome driver setup completed
+2025-09-24 19:14:01 [INF] Starting authentication process
+2025-09-24 19:14:07 [INF] Authentication cookies added successfully
+2025-09-24 19:14:07 [INF] Navigating to dashboard and create report page
+2025-09-24 19:14:15 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:14:15 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:14:15 [INF] Filling and submitting report form
+2025-09-24 19:20:42 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 19:20:42 [INF] Adding job: DEFAULT.Worker
+2025-09-24 19:22:00 [INF] Setting up Chrome driver
+2025-09-24 19:22:01 [INF] Chrome driver setup completed
+2025-09-24 19:22:01 [INF] Starting authentication process
+2025-09-24 19:22:09 [INF] Authentication cookies added successfully
+2025-09-24 19:22:09 [INF] Navigating to dashboard and create report page
+2025-09-24 19:22:18 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:22:18 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:22:18 [INF] Filling and submitting report form
+2025-09-24 19:22:23 [INF] Message entered
+2025-09-24 19:22:40 [INF] Send button clicked with MouseEvent
+2025-09-24 19:22:51 [INF] Capturing screenshot and preparing email
+2025-09-24 19:22:54 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_192251.png
+2025-09-24 19:22:54 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_192251.png
+2025-09-24 19:23:01 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 19:23:03 [INF] Daily report process completed successfully
+2025-09-24 19:24:00 [INF] Setting up Chrome driver
+2025-09-24 19:24:01 [INF] Chrome driver setup completed
+2025-09-24 19:24:01 [INF] Starting authentication process
+2025-09-24 19:24:09 [INF] Authentication cookies added successfully
+2025-09-24 19:24:09 [INF] Navigating to dashboard and create report page
+2025-09-24 19:24:17 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:24:17 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:24:17 [INF] Filling and submitting report form
+2025-09-24 19:26:54 [INF] Setting up Chrome driver
+2025-09-24 19:26:57 [INF] Chrome driver setup completed
+2025-09-24 19:26:57 [INF] Starting authentication process
+2025-09-24 19:26:57 [INF] Message entered
+2025-09-24 19:27:04 [INF] Send button clicked with MouseEvent
+2025-09-24 19:27:09 [INF] Authentication cookies added successfully
+2025-09-24 19:27:09 [INF] Navigating to dashboard and create report page
+2025-09-24 19:27:11 [INF] Capturing screenshot and preparing email
+2025-09-24 19:27:14 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_192711.png
+2025-09-24 19:27:14 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_192711.png
+2025-09-24 19:27:18 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:27:18 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:27:18 [INF] Filling and submitting report form
+2025-09-24 19:27:19 [INF] Message entered
+2025-09-24 19:27:22 [INF] Send button clicked with MouseEvent
+2025-09-24 19:27:24 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 19:27:24 [INF] Daily report process completed successfully
+2025-09-24 19:27:27 [INF] Capturing screenshot and preparing email
+2025-09-24 19:27:31 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_192727.png
+2025-09-24 19:27:31 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_192727.png
+2025-09-24 19:27:38 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 19:27:38 [INF] Daily report process completed successfully
+2025-09-24 19:28:00 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 19:28:00 [INF] Adding job: DEFAULT.Worker
+2025-09-24 19:28:00 [INF] Setting up Chrome driver
+2025-09-24 19:28:01 [INF] Chrome driver setup completed
+2025-09-24 19:28:01 [INF] Starting authentication process
+2025-09-24 19:29:26 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 19:29:26 [INF] Adding job: DEFAULT.Worker
+2025-09-24 19:30:00 [INF] Setting up Chrome driver
+2025-09-24 19:30:01 [INF] Chrome driver setup completed
+2025-09-24 19:30:01 [INF] Starting authentication process
+2025-09-24 19:30:06 [INF] Authentication cookies added successfully
+2025-09-24 19:30:06 [INF] Navigating to dashboard and create report page
+2025-09-24 19:30:14 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:30:14 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:30:14 [INF] Filling and submitting report form
+2025-09-24 19:30:22 [INF] Message entered
+2025-09-24 19:31:05 [INF] Send button clicked with MouseEvent
+2025-09-24 19:31:14 [INF] Capturing screenshot and preparing email
+2025-09-24 19:31:15 [ERR] Exception Occurred unknown error: failed to change window state to 'normal', current state is 'maximized'
+  (Session info: chrome=140.0.7339.129)
+OpenQA.Selenium.UnknownErrorException: unknown error: failed to change window state to 'normal', current state is 'maximized'
+  (Session info: chrome=140.0.7339.129)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Window.set_Size(Size value)
+   at DailyPost.BackgroundWorker.Services.DailyPostService.TakeScreenShot(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Services\DailyPostService.cs:line 100
+2025-09-24 19:31:15 [INF] Screenshot captured at: 
+2025-09-24 19:31:15 [ERR] Error occurred while capturing screenshot or sending email
+System.ArgumentException: The value cannot be an empty string. (Parameter 'fileName')
+   at System.ArgumentException.ThrowNullOrEmptyException(String argument, String paramName)
+   at System.ArgumentException.ThrowIfNullOrEmpty(String argument, String paramName)
+   at System.Net.Mail.AttachmentBase.SetContentFromFile(String fileName, String mediaType)
+   at System.Net.Mail.Attachment..ctor(String fileName)
+   at DailyPost.BackgroundWorker.Services.DailyPostService.SendEmail(EmailInfo emailInfo) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Services\DailyPostService.cs:line 180
+   at DailyPost.BackgroundWorker.Worker.CaptureScreenshotAndSendEmail(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 228
+2025-09-24 19:31:23 [ERR] Exception Occured The value cannot be an empty string. (Parameter 'fileName')
+System.ArgumentException: The value cannot be an empty string. (Parameter 'fileName')
+   at System.ArgumentException.ThrowNullOrEmptyException(String argument, String paramName)
+   at System.ArgumentException.ThrowIfNullOrEmpty(String argument, String paramName)
+   at System.Net.Mail.AttachmentBase.SetContentFromFile(String fileName, String mediaType)
+   at System.Net.Mail.Attachment..ctor(String fileName)
+   at DailyPost.BackgroundWorker.Services.DailyPostService.SendEmail(EmailInfo emailInfo) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Services\DailyPostService.cs:line 180
+   at DailyPost.BackgroundWorker.Worker.CaptureScreenshotAndSendEmail(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 228
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 36
+2025-09-24 19:36:51 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 19:36:51 [INF] Adding job: DEFAULT.Worker
+2025-09-24 19:38:00 [INF] Setting up Chrome driver
+2025-09-24 19:38:02 [INF] Chrome driver setup completed
+2025-09-24 19:38:02 [INF] Starting authentication process
+2025-09-24 19:38:07 [INF] Authentication cookies added successfully
+2025-09-24 19:38:07 [INF] Navigating to dashboard and create report page
+2025-09-24 19:38:15 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:38:15 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:38:15 [INF] Filling and submitting report form
+2025-09-24 19:40:05 [INF] Setting up Chrome driver
+2025-09-24 19:40:08 [INF] Chrome driver setup completed
+2025-09-24 19:40:08 [INF] Starting authentication process
+2025-09-24 19:40:09 [INF] Message entered
+2025-09-24 19:40:15 [INF] Send button clicked with MouseEvent
+2025-09-24 19:40:52 [INF] Capturing screenshot and preparing email
+2025-09-24 19:40:55 [INF] Authentication cookies added successfully
+2025-09-24 19:40:55 [INF] Navigating to dashboard and create report page
+2025-09-24 19:40:56 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_194052.png
+2025-09-24 19:40:56 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_194052.png
+2025-09-24 19:41:18 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 19:41:21 [INF] Daily report process completed successfully
+2025-09-24 19:41:30 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:41:30 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:41:30 [INF] Filling and submitting report form
+2025-09-24 19:41:49 [INF] Message entered
+2025-09-24 19:42:07 [INF] Setting up Chrome driver
+2025-09-24 19:42:08 [INF] Send button clicked with MouseEvent
+2025-09-24 19:42:10 [INF] Chrome driver setup completed
+2025-09-24 19:42:10 [INF] Starting authentication process
+2025-09-24 19:42:21 [INF] Capturing screenshot and preparing email
+2025-09-24 19:42:24 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_194221.png
+2025-09-24 19:42:24 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_194221.png
+2025-09-24 19:42:30 [INF] Authentication cookies added successfully
+2025-09-24 19:42:30 [INF] Navigating to dashboard and create report page
+2025-09-24 19:42:51 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 19:42:56 [INF] Daily report process completed successfully
+2025-09-24 19:42:56 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:42:56 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:42:56 [INF] Filling and submitting report form
+2025-09-24 19:43:48 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 19:43:48 [INF] Adding job: DEFAULT.Worker
+2025-09-24 19:44:00 [INF] Setting up Chrome driver
+2025-09-24 19:44:01 [INF] Chrome driver setup completed
+2025-09-24 19:44:01 [INF] Starting authentication process
+2025-09-24 19:44:15 [INF] Authentication cookies added successfully
+2025-09-24 19:44:15 [INF] Navigating to dashboard and create report page
+2025-09-24 19:44:32 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:44:32 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:44:32 [INF] Filling and submitting report form
+2025-09-24 19:44:42 [INF] Message entered
+2025-09-24 19:45:01 [INF] Send button clicked with MouseEvent
+2025-09-24 19:45:32 [INF] Capturing screenshot and preparing email
+2025-09-24 19:45:32 [ERR] Exception Occurred unknown error: failed to change window state to 'normal', current state is 'maximized'
+  (Session info: chrome=140.0.7339.129)
+OpenQA.Selenium.UnknownErrorException: unknown error: failed to change window state to 'normal', current state is 'maximized'
+  (Session info: chrome=140.0.7339.129)
+   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)
+   at OpenQA.Selenium.WebDriver.ExecuteAsync(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Window.set_Size(Size value)
+   at DailyPost.BackgroundWorker.Services.DailyPostService.TakeScreenShot(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Services\DailyPostService.cs:line 100
+2025-09-24 19:45:32 [INF] Screenshot captured at: 
+2025-09-24 19:45:33 [ERR] Error occurred while capturing screenshot or sending email
+System.ArgumentException: The value cannot be an empty string. (Parameter 'fileName')
+   at System.ArgumentException.ThrowNullOrEmptyException(String argument, String paramName)
+   at System.ArgumentException.ThrowIfNullOrEmpty(String argument, String paramName)
+   at System.Net.Mail.AttachmentBase.SetContentFromFile(String fileName, String mediaType)
+   at System.Net.Mail.Attachment..ctor(String fileName)
+   at DailyPost.BackgroundWorker.Services.DailyPostService.SendEmail(EmailInfo emailInfo) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Services\DailyPostService.cs:line 180
+   at DailyPost.BackgroundWorker.Worker.CaptureScreenshotAndSendEmail(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 228
+2025-09-24 19:45:46 [ERR] Exception Occured The value cannot be an empty string. (Parameter 'fileName')
+System.ArgumentException: The value cannot be an empty string. (Parameter 'fileName')
+   at System.ArgumentException.ThrowNullOrEmptyException(String argument, String paramName)
+   at System.ArgumentException.ThrowIfNullOrEmpty(String argument, String paramName)
+   at System.Net.Mail.AttachmentBase.SetContentFromFile(String fileName, String mediaType)
+   at System.Net.Mail.Attachment..ctor(String fileName)
+   at DailyPost.BackgroundWorker.Services.DailyPostService.SendEmail(EmailInfo emailInfo) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Services\DailyPostService.cs:line 180
+   at DailyPost.BackgroundWorker.Worker.CaptureScreenshotAndSendEmail(IWebDriver driver) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 228
+   at DailyPost.BackgroundWorker.Worker.Execute(IJobExecutionContext context) in D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.BackgroundWorker\Worker.cs:line 36
+2025-09-24 19:46:00 [INF] Setting up Chrome driver
+2025-09-24 19:46:01 [INF] Chrome driver setup completed
+2025-09-24 19:46:01 [INF] Starting authentication process
+2025-09-24 19:46:14 [INF] Authentication cookies added successfully
+2025-09-24 19:46:14 [INF] Navigating to dashboard and create report page
+2025-09-24 19:46:34 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:46:34 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:46:34 [INF] Filling and submitting report form
+2025-09-24 19:46:34 [INF] Message entered
+2025-09-24 19:46:37 [INF] Send button clicked with MouseEvent
+2025-09-24 19:46:47 [INF] Capturing screenshot and preparing email
+2025-09-24 19:46:51 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_194647.png
+2025-09-24 19:46:51 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_194647.png
+2025-09-24 19:47:08 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 19:47:08 [INF] Daily report process completed successfully
+2025-09-24 19:48:00 [INF] Setting up Chrome driver
+2025-09-24 19:48:01 [INF] Chrome driver setup completed
+2025-09-24 19:48:01 [INF] Starting authentication process
+2025-09-24 19:48:09 [INF] Authentication cookies added successfully
+2025-09-24 19:48:09 [INF] Navigating to dashboard and create report page
+2025-09-24 19:48:17 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:48:17 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:48:17 [INF] Filling and submitting report form
+2025-09-24 19:48:17 [INF] Message entered
+2025-09-24 19:48:20 [INF] Send button clicked with MouseEvent
+2025-09-24 19:55:01 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 19:55:01 [INF] Adding job: DEFAULT.Worker
+2025-09-24 19:56:02 [INF] Setting up Chrome driver
+2025-09-24 19:56:38 [INF] Chrome driver setup completed
+2025-09-24 19:56:38 [INF] Starting authentication process
+2025-09-24 19:56:43 [INF] Authentication cookies added successfully
+2025-09-24 19:56:43 [INF] Navigating to dashboard and create report page
+2025-09-24 19:56:53 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:56:53 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:57:05 [INF] Filling and submitting report form
+2025-09-24 19:57:05 [INF] Message entered
+2025-09-24 19:57:08 [INF] Send button clicked with MouseEvent
+2025-09-24 19:57:18 [INF] Capturing screenshot and preparing email
+2025-09-24 19:57:21 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_195718.png
+2025-09-24 19:57:21 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_195718.png
+2025-09-24 19:57:29 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 19:57:29 [INF] Daily report process completed successfully
+2025-09-24 19:58:00 [INF] Setting up Chrome driver
+2025-09-24 19:58:01 [INF] Chrome driver setup completed
+2025-09-24 19:58:01 [INF] Starting authentication process
+2025-09-24 19:58:07 [INF] Authentication cookies added successfully
+2025-09-24 19:58:07 [INF] Navigating to dashboard and create report page
+2025-09-24 19:58:14 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 19:58:14 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 19:58:44 [INF] Filling and submitting report form
+2025-09-24 19:58:44 [INF] Message entered
+2025-09-24 19:58:47 [INF] Send button clicked with MouseEvent
+2025-09-24 19:58:57 [INF] Capturing screenshot and preparing email
+2025-09-24 19:59:01 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_195857.png
+2025-09-24 19:59:01 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_195857.png
+2025-09-24 19:59:07 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 19:59:07 [INF] Daily report process completed successfully
+2025-09-24 20:07:56 [INF] Adding 1 jobs, 1 triggers.
+2025-09-24 20:07:56 [INF] Adding job: DEFAULT.Worker
+2025-09-24 20:08:00 [INF] Setting up Chrome driver
+2025-09-24 20:08:01 [INF] Chrome driver setup completed
+2025-09-24 20:08:01 [INF] Starting authentication process
+2025-09-24 20:08:14 [INF] Authentication cookies added successfully
+2025-09-24 20:08:14 [INF] Navigating to dashboard and create report page
+2025-09-24 20:08:23 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 20:08:23 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 20:09:28 [INF] Filling and submitting report form
+2025-09-24 20:09:37 [INF] Message entered
+2025-09-24 20:09:50 [INF] Send button clicked with MouseEvent
+2025-09-24 20:10:00 [INF] Setting up Chrome driver
+2025-09-24 20:10:03 [INF] Chrome driver setup completed
+2025-09-24 20:10:03 [INF] Starting authentication process
+2025-09-24 20:10:04 [INF] Capturing screenshot and preparing email
+2025-09-24 20:10:07 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_201004.png
+2025-09-24 20:10:07 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_201004.png
+2025-09-24 20:10:09 [INF] Authentication cookies added successfully
+2025-09-24 20:10:09 [INF] Navigating to dashboard and create report page
+2025-09-24 20:10:14 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 20:10:15 [INF] Daily report process completed successfully
+2025-09-24 20:10:18 [INF] Current URL: https://aimanager.techjays.com/app/reports/
+2025-09-24 20:10:18 [INF] Dashboard loaded successfully, navigating to create report
+2025-09-24 20:10:22 [INF] Filling and submitting report form
+2025-09-24 20:10:38 [INF] Message entered
+2025-09-24 20:10:39 [INF] Cleaned up Chrome user data directory
+2025-09-24 20:10:45 [INF] Send button clicked with MouseEvent
+2025-09-24 20:10:58 [INF] Capturing screenshot and preparing email
+2025-09-24 20:11:01 [INF] Full page screenshot saved at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_201058.png
+2025-09-24 20:11:01 [INF] Screenshot captured at: D:\Talukder_GitHub\Automation-Daily-Update-App\Automation-Daily-Post\Source-Code\DailyPost.Api\Screenshot\ReportConfirmation_20250924_201058.png
+2025-09-24 20:11:08 [INF] Email sent successfully to: talukder.roni.ict@gmail.com
+2025-09-24 20:11:08 [INF] Daily report process completed successfully
+2025-09-24 20:11:11 [INF] Cleaned up Chrome user data directory

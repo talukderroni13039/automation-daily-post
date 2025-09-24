@@ -2,11 +2,13 @@
 using Microsoft.Extensions.Configuration;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools;
 using OpenQA.Selenium.Support.UI;
 using Quartz;
 using Serilog;
 using System.IO;
 using System.Text;
+using Log = Serilog.Log;
 
 namespace DailyPost.BackgroundWorker
 {
@@ -38,11 +40,30 @@ namespace DailyPost.BackgroundWorker
             }
             catch (Exception ex)
             {
-                Log.Error(ex,"Exception Occured "+ ex.Message);
-                await  SendEmailForException(ex.Message);
+                Log.Error(ex, "Exception occurred: " + ex.Message);
+                // await SendEmailForException(ex.Message);
             }
-       
-        }
+            finally
+            {
+                // Ensure proper cleanup
+                try
+                {
+                    driver?.Quit();
+                    driver?.Dispose();
+
+                    // Clean up temporary directory
+                    if (!string.IsNullOrEmpty(userDataDir) && Directory.Exists(userDataDir))
+                    {
+                        Directory.Delete(userDataDir, true);
+                        Log.Information("Cleaned up Chrome user data directory");
+                    }
+                }
+                catch (Exception cleanupEx)
+                {
+                    Log.Warning($"Cleanup failed: {cleanupEx.Message}");
+                }
+            }
+          }
 
         private (IWebDriver driver, string userDataDir) SetupChromeDriver()
         {
@@ -56,24 +77,31 @@ namespace DailyPost.BackgroundWorker
             // Ensure directory exists
             Directory.CreateDirectory(userDataDir);
 
-            // Configure Chrome options for complete isolation
+            // Optimized Chrome options for Linux server
             ChromeOptions options = new ChromeOptions();
-            options.AddArgument("--headless=new");
-            options.AddArgument("--disable-gpu");
-            options.AddArgument("--no-sandbox");
-            options.AddArgument("--disable-dev-shm-usage");
-            options.AddArgument($"--user-data-dir={userDataDir}");
-            options.AddArgument("--disable-extensions");
-            options.AddArgument("--disable-default-apps");
-            options.AddArgument("--no-first-run");
-            options.AddArgument("--no-default-browser-check");
+            options.AddArgument("--headless=new");              // Modern headless mode
+            options.AddArgument("--no-sandbox");               // Required for Linux/Docker
+            options.AddArgument("--disable-dev-shm-usage");    // Overcome limited resource problems
+            options.AddArgument("--disable-gpu");              // Disable GPU hardware acceleration
+            options.AddArgument($"--user-data-dir={userDataDir}"); // Use the created directory
+            options.AddArgument("--disable-web-security");     // Help with some CORS issues
+            options.AddArgument("--disable-features=ChromeWhatsNew"); // Disable Chrome "What's New" page
+            options.AddArgument("--disable-extensions");       // Disable extensions
+            options.AddArgument("--disable-default-apps");     // Disable default apps
+            options.AddArgument("--no-first-run");            // Skip first run tasks
+            options.AddArgument("--no-default-browser-check"); // Don't check if Chrome is default
+            options.AddArgument("--disable-backgrounding-occluded-windows"); // Better resource management
+            options.AddArgument("--disable-background-networking"); // Disable background networking
+            options.AddArgument("--disable-background-timer-throttling"); // Better performance
+            options.AddArgument("--disable-renderer-backgrounding"); // Better performance
+            options.AddArgument("--window-size=1920,1080");    // Set consistent window size
 
-            // Configure service
+            // Configure ChromeDriver service
             var service = ChromeDriverService.CreateDefaultService();
             service.SuppressInitialDiagnosticInformation = true;
             service.HideCommandPromptWindow = true;
 
-            var driver = new ChromeDriver(options);
+            var driver = new ChromeDriver(service, options, TimeSpan.FromMinutes(3));
             Log.Information("Chrome driver setup completed");
 
             return (driver, userDataDir);
@@ -148,15 +176,39 @@ namespace DailyPost.BackgroundWorker
             Log.Information("Filling and submitting report form");
             try
             {
-                var textarea = driver.FindElement(By.Id("chatInputConv"));
                 Message message = await _iDailyPostService.ReadMessageFromJsonFile();
                 var status = await GenerateStatusMessage(message);
 
-                textarea.SendKeys(status);
-                await Task.Delay(3000);
-                Log.Information("Report message entered successfully");
+                // Fill the contenteditable div
+                var textarea = driver.FindElement(By.CssSelector("div[x-ref='desktopInput']"));
+              
+                IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+
+                // Focus first, then set content
+                js.ExecuteScript("arguments[0].focus();", textarea);
+                js.ExecuteScript("arguments[0].innerHTML = arguments[1];", textarea, status);
+
+                // Trigger multiple events to ensure Alpine.js detects the change
+                js.ExecuteScript("arguments[0].dispatchEvent(new Event('input', { bubbles: true }));", textarea);
+                js.ExecuteScript("arguments[0].dispatchEvent(new Event('change', { bubbles: true }));", textarea);
+
+                Log.Information("Message entered");
+                await Task.Delay(3000); // Give more time for Alpine.js to update
+
+                // Try triggering the Alpine.js handler directly
+                var sendButton = driver.FindElement(By.XPath("//button[contains(., 'Send')]"));
                 textarea.SendKeys(Keys.Enter);
-                await Task.Delay(5000);
+    //            // Method 1: Dispatch a proper mouse event
+    //            js.ExecuteScript(@"
+    //    arguments[0].dispatchEvent(new MouseEvent('click', {
+    //        view: window,
+    //        bubbles: true,
+    //        cancelable: true
+    //    }));
+    //", sendButton);
+
+                Log.Information("Send button clicked with MouseEvent");
+                await Task.Delay(10000);
 
             }
             catch (Exception ex)
@@ -165,7 +217,6 @@ namespace DailyPost.BackgroundWorker
                 throw ex;
             }
         }
-
         private async Task CaptureScreenshotAndSendEmail(IWebDriver driver)
         {
             Log.Information("Capturing screenshot and preparing email");
