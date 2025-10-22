@@ -180,8 +180,8 @@ namespace DailyPost.BackgroundWorker
                 var status = await GenerateStatusMessage(message);
 
                 // Fill the contenteditable div
-                var textarea = driver.FindElement(By.CssSelector("div[x-ref='desktopInput']"));
-              
+                //var textarea = driver.FindElement(By.CssSelector("div[x-ref='desktopInput']"));
+                var textarea = driver.FindElement(By.CssSelector("div[x-ref='input']"));
                 IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
 
                 // Focus first, then set content
