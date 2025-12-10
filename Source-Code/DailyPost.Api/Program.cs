@@ -1,6 +1,5 @@
 ﻿using DailyPost.BackgroundWorker;
 using DailyPost.BackgroundWorker.Services;
-using Quartz;
 using Serilog;
 using Serilog.Events;
 
